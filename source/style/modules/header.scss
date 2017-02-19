@@ -1,0 +1,111 @@
+.header {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 600px;
+
+  &__bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/water.jpg);
+    background-size: cover;
+  }
+
+  &__name {
+    display: block;
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    svg {
+      width: 100%;
+      height: 600px;
+      fill: rgba(white, .2);
+    }
+  }
+
+  &__user {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+  }
+
+  &__socials {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    .socials {
+      margin: 0;
+
+      &__link {
+
+        svg {
+          fill: white;
+          transition: .5s;
+
+          &:hover {
+            fill: $green;
+          }
+        }
+      }
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    height: 105px;
+  }
+
+  &__arrow-left {
+    width: 50%;
+    margin-top: -1px;
+
+    svg {
+      fill: $bg-green-grey;
+    }
+  }
+
+  &__arrow-right {
+    width: 50%;
+
+    svg {
+      fill: white;
+    }
+  }
+
+  &__next {
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: rgba(white, .7);
+      transition: .5s;
+
+      &:hover {
+        fill: white;
+      }
+    }
+  }
+}

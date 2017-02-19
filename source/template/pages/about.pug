@@ -1,0 +1,28 @@
+extends ../template
+
+block title
+    title Обо мне
+
+block content
+    include ../modules/header
+    .main-container
+        include ../modules/hero
+        section.skills
+            h2.skills__title
+            .skills__text
+            h3.skills__heading
+            ul.skills__frontend
+                li.skills__frontend-item
+                li.skills__frontend-item
+                li.skills__frontend-item
+            ul.skills__backend
+                li.skills__backend-item
+                li.skills__backend-item
+                li.skills__backend-item
+                li.skills__backend-item
+            ul.skills__workflow
+                li.skills__workflow-item
+                li.skills__workflow-item
+                li.skills__workflow-item
+        section.map
+    include ../modules/footer

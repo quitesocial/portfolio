@@ -5,6 +5,6 @@
 	 width="900.006px" height="1013.986px" viewBox="0 0 900.006 1013.986" enable-background="new 0 0 900.006 1013.986"
 	 xml:space="preserve">
 <g>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#F0EFE9" d="M0.01,0l899.997,159.008v854.979H0L0.01,0z"/>
+	<path fill-rule="evenodd" preserveAspectRatio="none" clip-rule="evenodd" fill="#F0EFE9" d="M0.01,0l899.997,159.008v854.979H0L0.01,0z"/>
 </g>
 </svg>

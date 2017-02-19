@@ -7,27 +7,11 @@ block content
     .wrapper
         .welcome
             .welcome__info
-                .user
-                    .user__pic
-                        img(src='assets/images/avatar-2.jpg')
-                    h1.user__name Андрей Раздорский
-                    .user__desc Личный сайт веб-разработчика
-                ul.socials
-                    li.socials__item
-                        a.socials__link(href='#')
-                            svg.socials__svg
-                                use(xlink:href='assets/icons/sprite.svg#vk')
-                    li.socials__item
-                        a.socials__link(href='#')
-                            svg.socials__svg
-                                use(xlink:href='assets/icons/sprite.svg#github')
-                    li.socials__item
-                        a.socials__link(href='#')
-                            svg.socials__svg
-                                use(xlink:href='assets/icons/sprite.svg#in')
+                include ../modules/user
+                include ../modules/socials
             nav.welcome__nav
                 a.welcome__nav-item(href='portfolio.html') Мои работы
                 a.welcome__nav-item(href='about.html') Обо мне
                 a.welcome__nav-item(href='blog.html') Блог
         a.auth__button(href='#') Авторизоваться
-        .copyright &copy; Андрей Раздорский | создано с любовью в LoftSchool | 2017
+        include ../modules/copyright

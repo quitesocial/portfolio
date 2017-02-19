@@ -51,14 +51,15 @@ table {
 }
 
 .main-container {
-  width: 1200px;
+  width: 1115px;
   min-height: 100%;
   margin: 0 auto;
+  overflow: hidden;
 
   &:after {
     content: "";
     display: block;
     position: relative;
-    height: 50px;
+    height: 185px;
   }
 }
