@@ -1,0 +1,31 @@
+// fonts
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i');
+
+@font-face {
+  font-family: 'sansus_webissimoregular';
+  src: url('../fonts/sansus-webissimo-regular-webfont.woff2') format('woff2'), url('../fonts/sansus-webissimo-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$roboto: Roboto, sans-serif;
+$webissimo: 'sansus_webissimoregular', sans-serif;
+
+// colors
+
+$light-green: #6c9c5a;
+$green: #4e8839;
+$green-grey: #566358;
+$grey: #373e42;
+$link: #6da3bd;
+
+// breakpoints
+
+$large: "screen and (min-width: 1200px)";
+$desktop: "screen and (min-width: 992px) and (max-width: 1199px)";
+$laptop: "screen and (min-width: 768px) and (max-width: 991px)";
+$tablet: "screen and (min-width: 480px) and (max-width: 767px)";
+$mobile: "screen and (max-width: 479px)";
+
+
