@@ -6,6 +6,7 @@
   position: relative;
   z-index: 100;
   width: 50%;
+  min-height: 100%;
   background-color: $bg-green-grey;
 
   &__title {

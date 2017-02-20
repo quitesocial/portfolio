@@ -1,0 +1,63 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  width: 380px;
+  padding: 15px;
+  background-color: rgba(white, .8);
+  border-radius: 5px;
+
+  &__title {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: $webissimo;
+    font-size: 35px;
+    font-weight: 500;
+    color: $grey;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $grey;
+      height: 2px;
+      width: 90px;
+    }
+  }
+
+  &__list {
+    display: block;
+    padding: 25px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .fa {
+      display: block;
+      text-align: center;
+      width: 30px;
+      margin-right: 10px;
+      font-size: 25px;
+      color: $green;
+    }
+  }
+
+  &__name {
+    display: block;
+  }
+}

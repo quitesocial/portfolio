@@ -1,0 +1,374 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 100;
+  width: 50%;
+  min-height: 100%;
+  background-color: white;
+
+  &__title {
+    display: block;
+    position: relative;
+    width: 45%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: $webissimo;
+    font-size: 35px;
+    line-height: 41px;
+    color: $grey;
+    padding-bottom: 15px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $grey;
+      height: 2px;
+      width: 90px;
+    }
+  }
+
+  &__text {
+    display: block;
+    margin: 30px 80px 40px 80px;
+    font-weight: 400;
+    color: $grey;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 80px;
+  }
+
+  &__heading {
+    display: block;
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  &__frontend {
+    display: flex;
+    margin-bottom: 20px;
+
+    &-item {
+      margin-right: 30px;
+    }
+
+    &-item:nth-child(1) {
+      display: block;
+      position: relative;
+
+      &:after {
+        content: "HTML5";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 70px;
+        text-align: center;
+        font-size: 13px;
+        color: $green;
+        font-weight: 500;
+      }
+    }
+
+    &-item:nth-child(2) {
+      display: block;
+      position: relative;
+
+      &:after {
+        content: "CSS3";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 70px;
+        text-align: center;
+        font-size: 13px;
+        color: $green;
+        font-weight: 500;
+      }
+    }
+
+    &-item:nth-child(3) {
+      display: block;
+      position: relative;
+
+      &:after {
+        content: "JavaScript & JQuery";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 70px;
+        text-align: center;
+        font-size: 13px;
+        color: $green;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__backend {
+    display: flex;
+    margin-bottom: 20px;
+
+    &-item {
+      margin-right: 30px;
+    }
+
+    &-item:nth-child(1) {
+      display: block;
+      position: relative;
+
+      &:after {
+        content: "PHP";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 70px;
+        text-align: center;
+        font-size: 13px;
+        color: $green;
+        font-weight: 500;
+      }
+    }
+
+    &-item:nth-child(2) {
+      display: block;
+      position: relative;
+
+      &:after {
+        content: "mySQL";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 70px;
+        text-align: center;
+        font-size: 13px;
+        color: $green;
+        font-weight: 500;
+      }
+    }
+
+    &-item:nth-child(3) {
+      display: block;
+      position: relative;
+
+      &:after {
+        content: "Node.js & npm";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 70px;
+        text-align: center;
+        font-size: 13px;
+        color: $green;
+        font-weight: 500;
+      }
+    }
+
+    &-item:nth-child(4) {
+      display: block;
+      position: relative;
+
+      &:after {
+        content: "Mongo.db";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 70px;
+        text-align: center;
+        font-size: 13px;
+        color: $green;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__workflow {
+    display: flex;
+    margin-bottom: 20px;
+
+    &-item {
+      margin-right: 30px;
+    }
+
+    &-item:nth-child(1) {
+      display: block;
+      position: relative;
+
+      &:after {
+        content: "Git";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 70px;
+        text-align: center;
+        font-size: 13px;
+        color: $green;
+        font-weight: 500;
+      }
+    }
+
+    &-item:nth-child(2) {
+      display: block;
+      position: relative;
+
+      &:after {
+        content: "Gulp";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 70px;
+        text-align: center;
+        font-size: 13px;
+        color: $green;
+        font-weight: 500;
+      }
+    }
+
+    &-item:nth-child(3) {
+      display: block;
+      position: relative;
+
+      &:after {
+        content: "Bower";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 70px;
+        text-align: center;
+        font-size: 13px;
+        color: $green;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__circle {
+    fill: none;
+    stroke-width: 15;
+
+    &-first {
+      stroke: #dfdcd5;
+    }
+
+    &-second {
+      stroke: $light-green;
+      stroke-dasharray: .0010 282.6;
+      transition: all 1s;
+    }
+  }
+
+  &__circle-0 {
+    stroke-dasharray: .001 282.6;
+    opacity: .2;
+  }
+
+  &__circle-10 {
+    stroke-dasharray: 28.26 282.6;
+    opacity: .2;
+  }
+
+  &__circle-15 {
+    stroke-dasharray: 42.39 282.6;
+    opacity: .2;
+  }
+
+  &__circle-20 {
+    stroke-dasharray: 56.52 282.6;
+    opacity: .2;
+  }
+
+  &__circle-25 {
+    stroke-dasharray: 70.65 282.6;
+    opacity: .4;
+  }
+
+  &__circle-30 {
+    stroke-dasharray: 84.78 282.6;
+    opacity: .4;
+  }
+
+  &__circle-35 {
+    stroke-dasharray: 98.91 282.6;
+    opacity: .4;
+  }
+
+  &__circle-40 {
+    stroke-dasharray: 113.04 282.6;
+    opacity: .4;
+  }
+
+  &__circle-45 {
+    stroke-dasharray: 127.17 282.6;
+    opacity: .6;
+  }
+
+  &__circle-50 {
+    stroke-dasharray: 141.3 282.6;
+    opacity: .6;
+  }
+
+  &__circle-55 {
+    stroke-dasharray: 155.43 282.6;
+    opacity: .6;
+  }
+
+  &__circle-60 {
+    stroke-dasharray: 169.56 282.6;
+    opacity: .6;
+  }
+
+  &__circle-65 {
+    stroke-dasharray: 183.69 282.6;
+    opacity: .8;
+  }
+
+  &__circle-70 {
+    stroke-dasharray: 197.82 282.6;
+    opacity: .8;
+  }
+
+  &__circle-75 {
+    stroke-dasharray: 211.95 282.6;
+    opacity: .8;
+  }
+
+  &__circle-80 {
+    stroke-dasharray: 226.08 282.6;
+    opacity: .8;
+  }
+
+  &__circle-85 {
+    stroke-dasharray: 240.21 282.6;
+    opacity: 1;
+  }
+
+  &__circle-90 {
+    stroke-dasharray: 254.34 282.6;
+    opacity: 1;
+  }
+
+  &__circle-95 {
+    stroke-dasharray: 268.47 282.6;
+    opacity: 1;
+  }
+
+  &__circle-100 {
+    stroke-dasharray: 282.6 282.6;
+    opacity: 1;
+  }
+}
