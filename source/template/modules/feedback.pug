@@ -1,9 +1,10 @@
 .feedback
-    .feedback__title
-    form.feedback__form
-        input.feedback__name
-        input.feedback__email
-        input.feedback__text
+    .feedback__main
+        h2.feedback__title СВЯЗАТЬСЯ СО МНОЙ
+        form.feedback__form
+            input.feedback__name(type='text' name='name' placeholder='Имя')
+            input.feedback__email(type='email' name='email' placeholder='Email')
+            textarea.feedback__text(name='message' placeholder='Ваше сообщение')
     .feedback__footer
-        input.feedback__button
-        input.feedback__button
+        button.feedback__button(type='submit') Отправить
+        button.feedback__button(type='reset') Очистить
