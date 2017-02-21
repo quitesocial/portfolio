@@ -1,0 +1,155 @@
+.slider {
+  display: flex;
+  flex: 1;
+  margin-top: 5px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 750px;
+    padding: 140px;
+    background-color: $bg-green-grey;
+  }
+
+  &__title {
+    display: block;
+    position: relative;
+    padding-bottom: 25px;
+    font-family: $webissimo;
+    font-size: 35px;
+    line-height: 41px;
+    text-align: center;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $grey;
+      height: 2px;
+      width: 90px;
+    }
+  }
+
+  &__skills {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    color: $green;
+    margin: 25px 0;
+  }
+
+  &__button {
+    display: block;
+    margin-top: 35px;
+    padding: 15px 20px;
+    border-radius: 30px;
+    background-color: $green;
+    text-decoration: none;
+    transition: .5s;
+
+    span {
+      color: white;
+    }
+    span:first-child {
+      margin-right: 10px;
+    }
+
+    span:hover {
+      color: white;
+    }
+
+    &:hover {
+      background-color: $light-green;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 750px;
+    background-color: $bg-grey;
+  }
+
+  &__pics {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 525px;
+
+    img {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    width: 100%;
+    height: 225px;
+
+    &-down {
+      position: relative;
+      width: 50%;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      svg {
+        position: absolute;
+        width: 45px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: rgba(white, .7);
+        transition: .5s;
+      }
+
+      &:hover {
+
+        svg {
+          fill: white;
+        }
+      }
+    }
+
+    &-up {
+      width: 50%;
+      position: relative;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      svg {
+        position: absolute;
+        width: 45px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: rgba(white, .7);
+        transition: .5s;
+      }
+
+      &:hover {
+
+        svg {
+          fill: white;
+        }
+      }
+    }
+  }
+}

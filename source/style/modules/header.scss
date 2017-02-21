@@ -1,4 +1,4 @@
-.header {
+.header, .header_about {
   display: block;
   position: relative;
   width: 100%;
@@ -106,6 +106,24 @@
 
       &:hover {
         fill: white;
+      }
+    }
+  }
+
+  //&_portfolio .header__arrows .header__arrow-left svg {
+  //        fill: white;
+  //}
+  //
+  //&_portfolio .header__arrows .header__arrow-right svg {
+  //  fill: white;
+  //}
+
+  &_portfolio {
+    .header__arrows {
+      .header__arrow-left, .header__arrow-right {
+        svg {
+          fill: white;
+        }
       }
     }
   }

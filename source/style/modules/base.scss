@@ -58,10 +58,7 @@ table {
   margin: 0 auto;
   overflow: hidden;
 
-  &:after {
-    content: "";
-    display: block;
-    position: relative;
-    height: 185px;
+  &_portfolio {
+    flex-direction: column;
   }
 }
