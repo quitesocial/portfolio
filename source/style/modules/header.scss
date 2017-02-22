@@ -110,19 +110,33 @@
     }
   }
 
-  //&_portfolio .header__arrows .header__arrow-left svg {
-  //        fill: white;
-  //}
-  //
-  //&_portfolio .header__arrows .header__arrow-right svg {
-  //  fill: white;
-  //}
-
   &_portfolio {
     .header__arrows {
       .header__arrow-left, .header__arrow-right {
         svg {
           fill: white;
+        }
+      }
+    }
+  }
+
+  &_blog {
+    height: 440px;
+
+    .header__bg {
+      top: 0;
+      left: 0;
+      background-image: url(../images/water.jpg);
+      background-size: cover;
+      background-position-y: 540px;
+    }
+
+    .header__arrows {
+      top: 270px;
+
+      .header__arrow-left, .header__arrow-right {
+        svg {
+          fill: $bg-white;
         }
       }
     }
