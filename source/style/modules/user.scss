@@ -23,6 +23,10 @@
     font-size: 28px;
     font-weight: 400;
     margin-bottom: 0;
+
+    @include desktop {
+      font-size: 35px;
+    }
   }
 
   &__desc {

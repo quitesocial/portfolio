@@ -35,7 +35,27 @@ $bg-white: #faf8f0;
 // mixins
 
 @mixin desktop {
-  @media (max-width: 1200px) {
+  @media screen and (min-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width:
+1200px) and (max-width: 1799px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width:
+          768px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 767px) {
     @content;
   }
 }

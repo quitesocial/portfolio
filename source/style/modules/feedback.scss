@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 465px;
   width: 380px;
   margin-top: 70px;
   background-color: rgba(#e8e8e4, .6);
@@ -14,6 +13,10 @@
     height: 420px;
     align-items: stretch;
     padding: 35px 20px 20px 20px;
+
+    @include desktop {
+      height: auto;
+    }
   }
 
   &__title {

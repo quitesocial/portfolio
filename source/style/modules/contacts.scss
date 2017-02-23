@@ -8,7 +8,12 @@
   width: 380px;
   padding: 15px;
   background-color: rgba(white, .8);
-  border-radius: 5px;
+  border-radius: 10px;
+
+  @include desktop {
+    padding: 35px;
+    width: auto;
+  }
 
   &__title {
     display: block;
@@ -20,6 +25,10 @@
     font-size: 35px;
     font-weight: 500;
     color: $grey;
+
+    @include desktop {
+      width: auto;
+    }
 
     &:after {
       content: "";
@@ -36,12 +45,20 @@
   &__list {
     display: block;
     padding: 25px;
+
+    @include desktop {
+      padding: 0;
+    }
   }
 
   &__item {
     display: flex;
     align-items: center;
     margin-bottom: 25px;
+
+    @include desktop {
+      margin-bottom: 15px;;
+    }
 
     &:last-child {
       margin-bottom: 0;

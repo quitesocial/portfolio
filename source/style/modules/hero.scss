@@ -9,6 +9,12 @@
   min-height: 100%;
   background-color: $bg-green-grey;
 
+  @include desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
   &__title {
     display: block;
     position: relative;
@@ -18,6 +24,10 @@
     color: $grey;
     width: 100%;
     text-align: center;
+
+    @include desktop {
+      width: 40%;
+    }
 
     &:after {
       content: "";
@@ -37,6 +47,10 @@
       left: 165px;
       width: 350px;
 
+      @include desktop {
+        left: 90px;
+      }
+
       svg {
         width: 100%;
         height: 100%;
@@ -49,6 +63,10 @@
     width: 440px;
     height: 440px;
     overflow: hidden;
+
+    @include desktop {
+
+    }
 
     img {
       width: 100%;
@@ -68,6 +86,13 @@
     width: 100%;
     text-align: center;
 
+    @include desktop {
+      width: 60%;
+      margin-top: 40px;
+      margin-left: auto;
+      margin-bottom: 0;
+    }
+
     &:after {
       content: "";
       position: absolute;
@@ -85,6 +110,13 @@
     margin: 0 80px 40px 80px;
     font-weight: 400;
     color: $grey;
+
+    @include desktop {
+      width: 60%;
+      padding: 25px 65px;
+      margin: 0;
+      margin-left: auto;
+    }
 
     p {
       margin-bottom: 20px;

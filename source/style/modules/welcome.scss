@@ -18,9 +18,18 @@
   border-radius: 10px;
   overflow: hidden;
 
+  @include desktop {
+    height: auto;
+  }
+
   &__info {
     width: 100%;
     height: 350px;
+
+    @include desktop {
+      width: auto;
+      height: auto;
+    }
   }
 
   &__nav {

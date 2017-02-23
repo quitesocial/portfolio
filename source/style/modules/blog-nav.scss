@@ -4,6 +4,11 @@
   width: 30%;
   background-color: $bg-white;
 
+  @include desktop {
+    width: 25%;
+    padding-left: 120px;
+  }
+
   &__list {
     display: flex;
     position: relative;

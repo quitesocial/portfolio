@@ -8,6 +8,10 @@
   overflow: hidden;
   transform: rotateY(-180deg)[translateX(-100%)];
 
+  @include desktop {
+    height: auto;
+  }
+
   &__info {
     display: flex;
     position: relative;
@@ -207,10 +211,16 @@
     color: white;
     font-weight: 400;
     text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
     padding: 10px 25px;
     border: 1px solid white;
     border-radius: 40px;
     transition: .5s;
+
+    @include desktop {
+      right: 100px;
+    }
 
     &:hover {
       background-color: $green;

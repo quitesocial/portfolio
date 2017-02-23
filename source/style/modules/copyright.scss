@@ -6,4 +6,8 @@
   transform: translateX(-50%);
   color: white;
   font-weight: 300;
+
+  @include desktop {
+    bottom: 50px;
+  }
 }

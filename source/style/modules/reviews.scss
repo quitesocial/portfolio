@@ -17,6 +17,10 @@
     background-image: url('../images/bg_portfolio.png');
     background-size: cover;
 
+    @include desktop {
+      height: 1000px;
+    }
+
     &-leave-1 {
       display: block;
       position: absolute;
@@ -26,6 +30,10 @@
       background-position: 0px -120px;
       width: 58px;
       height: 108px;
+
+      @include desktop {
+        left: 25%;
+      }
     }
 
     &-leave-2 {
@@ -37,6 +45,10 @@
       background-position: -141px 0px;
       width: 99px;
       height: 91px;
+
+      @include desktop {
+        left: 20%;
+      }
     }
 
     &-leave-3 {
@@ -48,6 +60,10 @@
       background-position: 0 0;
       width: 141px;
       height: 120px;
+
+      @include desktop {
+        right: 20%;
+      }
     }
   }
 

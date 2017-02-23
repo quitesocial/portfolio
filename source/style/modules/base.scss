@@ -59,6 +59,10 @@ table {
   margin: 0 auto;
   overflow: hidden;
 
+  @include desktop {
+    min-height: auto;
+  }
+
   &_portfolio {
     flex-direction: column;
   }

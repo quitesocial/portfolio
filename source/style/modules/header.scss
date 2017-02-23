@@ -14,6 +14,10 @@
     height: 100%;
     background-image: url(../images/water.jpg);
     background-size: cover;
+
+    @include desktop {
+      background-position: 0;
+    }
   }
 
   &__name {
@@ -23,6 +27,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @include desktop {
+      width: 60%;
+      transform: translate(-50%, -55%);
+    }
 
     svg {
       width: 100%;
@@ -83,6 +92,10 @@
     width: 50%;
     margin-top: 2px;
 
+    @include desktop {
+      margin-right: 1px;
+    }
+
     svg {
       fill: white;
     }
@@ -129,6 +142,10 @@
       background-image: url(../images/water.jpg);
       background-size: cover;
       background-position-y: 540px;
+
+      @include desktop {
+        background-position-y: 715px;
+      }
     }
 
     .header__arrows {
