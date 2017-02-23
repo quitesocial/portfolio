@@ -1,0 +1,26 @@
+.auth
+    .auth__info
+        h2.auth__title АВТОРИЗУЙТЕСЬ
+        form.auth__form
+            .auth__input
+                .auth__input-icon
+                    span.fa.fa-user
+                input.auth__input-text(type='text' placeholder='Логин')
+            .auth__input
+                .auth__input-icon
+                    span.fa.fa-key
+                input.auth__input-text(type='password' placeholder='Пароль')
+            label.auth__check-label
+                input.auth__checkbox(type='checkbox')
+                | Я человек
+            span.auth__robot Вы точно не робот?
+            .auth__radio
+                label.auth__radio-label
+                    input.auth__radio-button(type='radio' name='robot' value='yes')
+                    | Да
+                label.auth__radio-label
+                    input.auth__radio-button(type='radio' name='robot' value='no')
+                    | Не уверен
+    nav.auth__nav
+        a.auth__nav-item(href='index.html') На главную
+        a.auth__nav-item(href='#') Войти
