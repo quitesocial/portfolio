@@ -5,6 +5,10 @@
   height: 600px;
   overflow: hidden;
 
+  @include tablet {
+    height: 505px;
+  }
+
   &__bg {
     display: block;
     position: absolute;
@@ -78,6 +82,10 @@
     left: 50%;
     width: 1920px;
     transform: translateX(-50%);
+
+    @include tablet {
+      top: 335px;
+    }
   }
 
   &__arrow-left {
@@ -98,6 +106,10 @@
 
     svg {
       fill: white;
+
+      @include tablet {
+        fill: $bg-green-grey;
+      }
     }
   }
 
@@ -124,6 +136,11 @@
   }
 
   &_portfolio {
+
+    @include tablet {
+      height: 505px;
+    }
+
     .header__arrows {
       .header__arrow-left, .header__arrow-right {
         svg {
@@ -136,6 +153,10 @@
   &_blog {
     height: 440px;
 
+    @include tablet {
+      height: 505px;
+    }
+
     .header__bg {
       top: 0;
       left: 0;
@@ -146,6 +167,10 @@
       @include desktop {
         background-position-y: 715px;
       }
+
+      @include tablet {
+        background-position-y: 500px;
+      }
     }
 
     .header__arrows {
@@ -155,6 +180,15 @@
         svg {
           fill: $bg-white;
         }
+      }
+    }
+
+    .header__next {
+      bottom: 100px;
+      display: none;
+
+      @include tablet {
+        display: block;
       }
     }
   }

@@ -5,4 +5,8 @@
   background-image: url(../images/map.jpg);
   background-size: cover;
   opacity: .5;
+
+  @include tablet {
+    min-height: 100vh;
+  }
 }

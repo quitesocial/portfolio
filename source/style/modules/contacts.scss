@@ -15,6 +15,12 @@
     width: auto;
   }
 
+  @include tablet {
+    padding: 35px;
+    width: auto;
+    top: 45%;
+  }
+
   &__title {
     display: block;
     position: relative;
@@ -27,6 +33,10 @@
     color: $grey;
 
     @include desktop {
+      width: auto;
+    }
+
+    @include tablet {
       width: auto;
     }
 
@@ -49,6 +59,10 @@
     @include desktop {
       padding: 0;
     }
+
+    @include tablet {
+      padding: 0;
+    }
   }
 
   &__item {
@@ -58,6 +72,10 @@
 
     @include desktop {
       margin-bottom: 15px;;
+    }
+
+    @include tablet {
+      margin-bottom: 15px;
     }
 
     &:last-child {

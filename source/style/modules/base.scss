@@ -1,8 +1,5 @@
 * {
   font-family: $roboto;
-}
-
-* {
   box-sizing: border-box;
 }
 
@@ -63,11 +60,19 @@ table {
     min-height: auto;
   }
 
+  @include tablet {
+    flex-direction: column;
+  }
+
   &_portfolio {
     flex-direction: column;
   }
 
   &_blog {
     padding-bottom: 185px;
+
+    @include tablet {
+      padding-bottom: 275px;
+    }
   }
 }

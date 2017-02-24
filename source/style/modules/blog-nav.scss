@@ -9,6 +9,10 @@
     padding-left: 120px;
   }
 
+  @include tablet {
+    display: none;
+  }
+
   &__list {
     display: flex;
     position: relative;

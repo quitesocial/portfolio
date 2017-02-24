@@ -10,4 +10,10 @@
   @include desktop {
     bottom: 50px;
   }
+
+  @include tablet {
+    width: 100%;
+    text-align: center;
+    bottom: 35px;
+  }
 }
