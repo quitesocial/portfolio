@@ -4,8 +4,9 @@ block title
     title Мой Блог
 
 block content
-    include ../modules/header_blog
-    .main-container.main-container_blog
-        include ../modules/blog-nav
-        include ../modules/blog
-    include ../modules/footer
+    .parallax-wrapper#parallax
+        include ../modules/header_blog
+        .main-container.main-container_blog
+            include ../modules/blog-nav
+            include ../modules/blog
+        include ../modules/footer

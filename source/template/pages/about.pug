@@ -4,9 +4,10 @@ block title
     title Обо мне
 
 block content
-    include ../modules/header_about
-    .main-container
-        include ../modules/hero
-        include ../modules/skills
-    include ../modules/map
-    include ../modules/footer
+    .parallax-wrapper#parallax
+        include ../modules/header_about
+        .main-container
+            include ../modules/hero
+            include ../modules/skills
+        include ../modules/map
+        include ../modules/footer
