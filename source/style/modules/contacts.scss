@@ -21,6 +21,15 @@
     top: 45%;
   }
 
+  @include mobile {
+    padding: 30px;
+    width: auto;
+    top: 0;
+    left: 0;
+    transform: none;
+    border-radius: 0;
+  }
+
   &__title {
     display: block;
     position: relative;
@@ -40,6 +49,11 @@
       width: auto;
     }
 
+    @include mobile {
+      line-height: 41px;
+      padding-bottom: 15px;
+    }
+
     &:after {
       content: "";
       position: absolute;
@@ -49,6 +63,10 @@
       background-color: $grey;
       height: 2px;
       width: 90px;
+
+      @include mobile {
+        height: 3px;
+      }
     }
   }
 
@@ -63,6 +81,10 @@
     @include tablet {
       padding: 0;
     }
+
+    @include mobile {
+      padding: 0;
+    }
   }
 
   &__item {
@@ -75,6 +97,10 @@
     }
 
     @include tablet {
+      margin-bottom: 15px;
+    }
+
+    @include mobile {
       margin-bottom: 15px;
     }
 

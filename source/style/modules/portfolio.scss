@@ -11,6 +11,11 @@
       height: auto;
       margin-top: -30px;
     }
+
+    @include mobile {
+      height: auto;
+      margin-top: -45px;
+    }
   }
 
   &__title-pic {
@@ -24,6 +29,11 @@
 
     @include tablet {
       width: 400px;
+      height: auto;
+    }
+
+    @include mobile {
+      width: 250px;
       height: auto;
     }
 
@@ -49,6 +59,12 @@
     @include tablet {
       font-size: 48px;
       padding-bottom: 20px;
+    }
+
+    @include mobile {
+      font-size: 35px;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     &:after {

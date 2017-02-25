@@ -12,6 +12,12 @@
     font-size: 14px;
   }
 
+  @include mobile {
+    height: 350px;
+    margin-top: -350px;
+    font-size: 14px;
+  }
+
   &__up {
     display: flex;
     flex: 1;
@@ -21,6 +27,11 @@
 
     @include tablet {
       flex-wrap: wrap;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      height: 290px;
     }
   }
 
@@ -32,6 +43,12 @@
 
     @include tablet {
       width: 50%;
+    }
+
+    @include mobile {
+      width: 100%;
+      padding: 15px 20px;
+      text-align: center;
     }
   }
 
@@ -46,14 +63,31 @@
       width: 50%;
     }
 
+    @include mobile {
+      width: 100%;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 15px 20px;
+    }
+
     &-list {
       display: flex;
       color: white;
       margin: 30px 30px 10px 10px;
+
+      @include mobile {
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+      }
     }
 
     &-item {
       margin-left: 20px;
+
+      @include mobile {
+        margin: 0;
+      }
     }
 
     &-link {
@@ -71,6 +105,12 @@
 
       @include tablet {
         margin: 10px 30px;
+      }
+
+      @include mobile {
+        width: 100%;
+        margin: 0;
+        justify-content: center;
       }
 
       &__link:hover {
@@ -96,6 +136,14 @@
         top: 60%;
         height: 65px;
       }
+
+      @include mobile {
+        top: 0;
+        height: 1px;
+        left: 50%;
+        width: 80%;
+        transform: translateX(-50%);
+      }
     }
 
     &:after {
@@ -112,6 +160,15 @@
       @include tablet {
         display: none;
       }
+
+      @include mobile {
+        top: auto;
+        bottom: 0;
+        height: 1px;
+        left: 50%;
+        width: 80%;
+        transform: translateX(-50%);
+      }
     }
   }
 
@@ -125,11 +182,21 @@
       width: 100%;
     }
 
+    @include mobile {
+      width: 100%;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
     em:last-child {
       font-weight: 700;
       color: rgba(white, .7);
 
       @include tablet {
+        color: rgba(white, .5);
+      }
+
+      @include mobile {
         color: rgba(white, .5);
       }
     }
@@ -141,6 +208,10 @@
     height: 40px;
     padding: 8px;
     background-color: rgba($green, .7);
+
+    @include mobile {
+      height: 60px;
+    }
 
     .copyright {
       position: relative;

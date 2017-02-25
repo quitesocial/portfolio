@@ -64,6 +64,10 @@ table {
     flex-direction: column;
   }
 
+  @include mobile {
+    flex-direction: column;
+  }
+
   &_portfolio {
     flex-direction: column;
   }
@@ -73,6 +77,10 @@ table {
 
     @include tablet {
       padding-bottom: 275px;
+    }
+
+    @include mobile {
+      padding-bottom: 350px;
     }
   }
 }

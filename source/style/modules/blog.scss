@@ -18,6 +18,11 @@
     margin-top: -35px;
   }
 
+  @include mobile {
+    width: 100%;
+    padding: 0 5px;
+  }
+
   &__post {
     display: flex;
     position: relative;
@@ -28,6 +33,10 @@
 
     @include tablet {
       padding: 50px 0;
+    }
+
+    @include mobile {
+      padding: 30px 0;
     }
 
     &:after {
@@ -43,6 +52,10 @@
 
     &:last-child {
       padding-bottom: 45px;
+
+      @include mobile {
+        padding-bottom: 20px;
+      }
 
       &:after {
         display: none;
@@ -65,6 +78,12 @@
     @include tablet {
       font-size: 30px;
     }
+
+    @include mobile {
+      font-size: 21px;
+      line-height: 28px;
+      margin-bottom: 10px;
+    }
   }
 
   &__date {
@@ -76,6 +95,11 @@
 
     @include tablet {
       font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 24px;
     }
   }
 
@@ -90,10 +114,19 @@
       font-size: 14px;
     }
 
+    @include mobile {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
     p {
       display: block;
       position: relative;
       padding-top: 20px;
+
+      @include mobile {
+        padding-top: 10px;
+      }
     }
 
     img {

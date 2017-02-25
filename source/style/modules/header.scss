@@ -9,6 +9,10 @@
     height: 505px;
   }
 
+  @include mobile {
+    height: 560px;
+  }
+
   &__bg {
     display: block;
     position: absolute;
@@ -37,6 +41,10 @@
       transform: translate(-50%, -55%);
     }
 
+    @include mobile {
+      display: none;
+    }
+
     svg {
       width: 100%;
       height: 600px;
@@ -50,6 +58,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -70%);
+
+    @include mobile {
+      width: 90%;
+    }
   }
 
   &__socials {
@@ -57,6 +69,11 @@
     position: absolute;
     top: 30px;
     left: 30px;
+
+    @include mobile {
+      top: 15px;
+      left: 15px;
+    }
 
     .socials {
       margin: 0;
@@ -86,6 +103,10 @@
     @include tablet {
       top: 335px;
     }
+
+    @include mobile {
+      top: 390px;
+    }
   }
 
   &__arrow-left {
@@ -110,6 +131,10 @@
       @include tablet {
         fill: $bg-green-grey;
       }
+
+      @include mobile {
+        fill: $bg-green-grey;
+      }
     }
   }
 
@@ -122,6 +147,10 @@
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
+
+    @include mobile {
+      bottom: 55px;
+    }
 
     svg {
       width: 100%;
@@ -141,6 +170,10 @@
       height: 505px;
     }
 
+    @include mobile {
+      height: 560px;
+    }
+
     .header__arrows {
       .header__arrow-left, .header__arrow-right {
         svg {
@@ -157,6 +190,10 @@
       height: 505px;
     }
 
+    @include mobile {
+      height: 560px;
+    }
+
     .header__bg {
       top: 0;
       left: 0;
@@ -171,10 +208,18 @@
       @include tablet {
         background-position-y: 500px;
       }
+
+      @include mobile {
+        background-position-y: 555px;
+      }
     }
 
     .header__arrows {
       top: 270px;
+
+      @include mobile {
+        top: 385px;
+      }
 
       .header__arrow-left, .header__arrow-right {
         svg {
@@ -190,6 +235,16 @@
       @include tablet {
         display: block;
       }
+
+      @include mobile {
+        display: block;
+        bottom: 50px;
+      }
+    }
+
+    .menu-button {
+      width: 25px;
+      height: 25px;
     }
   }
 }

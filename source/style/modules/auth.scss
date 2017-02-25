@@ -17,6 +17,11 @@
     width: auto;
   }
 
+  @include mobile {
+    height: auto;
+    width: 300px;
+  }
+
   &__info {
     display: flex;
     position: relative;
@@ -35,6 +40,10 @@
     line-height: 41px;
     text-align: center;
     color: white;
+
+    @include mobile {
+      font-size: 30px;
+    }
 
     &:after {
       content: "";
@@ -227,10 +236,19 @@
       right: 100px;
     }
 
+    @include mobile {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     &:hover {
       background-color: $green;
       text-decoration: none;
       border-color: $green;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 }
