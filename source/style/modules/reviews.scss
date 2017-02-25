@@ -19,9 +19,9 @@
   &__bg {
     display: block;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    bottom: -100px;
+    left: -50px;
+    width: 2000px;
     height: 920px;
     background-image: url('../images/bg_portfolio.png');
     background-size: cover;
@@ -41,7 +41,7 @@
     &-leave-1 {
       display: block;
       position: absolute;
-      bottom: 610px;
+      bottom: 305px;
       left: 15%;
       background-image: url(../images/sprite.png);
       background-position: 0px -120px;
@@ -50,6 +50,7 @@
 
       @include desktop {
         left: 25%;
+        bottom: 450px;
       }
 
       @include tablet {
@@ -64,8 +65,8 @@
     &-leave-2 {
       display: block;
       position: absolute;
-      bottom: 1180px;
-      left: 1%;
+      bottom: 1015px;
+      left: 6%;
       background-image: url(../images/sprite.png);
       background-position: -141px 0px;
       width: 99px;
@@ -87,8 +88,8 @@
     &-leave-3 {
       display: block;
       position: absolute;
-      bottom: 715px;
-      right: 0;
+      bottom: 500px;
+      right: 5%;
       background-image: url(../images/sprite.png);
       background-position: 0 0;
       width: 141px;

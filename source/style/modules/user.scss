@@ -93,10 +93,9 @@
         display: block;
         position: absolute;
         height: 180px;
-        width: 500px;
-        left: 50%;
-        top: 140px;
-        transform: translateX(-50%);
+        width: 250px;
+        left: -50px;
+        top: -40px;
 
         @include tablet {
           height: auto;
@@ -106,7 +105,8 @@
 
         @include mobile {
           width: 150px;
-          top: -50px;
+          top: -55px;
+          left: -35px;
         }
 
         svg {

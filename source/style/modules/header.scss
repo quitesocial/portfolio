@@ -16,10 +16,10 @@
   &__bg {
     display: block;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: -250px;
+    left: -50px;
+    width: 2000px;
+    height: 1125px;
     background-image: url(../images/water.jpg);
     background-size: cover;
 
@@ -195,22 +195,24 @@
     }
 
     .header__bg {
-      top: 0;
-      left: 0;
+      top: -350px;
+      left: -100px;
       background-image: url(../images/water.jpg);
       background-size: cover;
-      background-position-y: 540px;
 
       @include desktop {
-        background-position-y: 715px;
+        top: -350px;
+        width: 2000px;
+        height: 1125px;
+        left: -50px;
       }
 
       @include tablet {
-        background-position-y: 500px;
+
       }
 
       @include mobile {
-        background-position-y: 555px;
+
       }
     }
 
