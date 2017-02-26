@@ -21,7 +21,38 @@
             layerStyle.oTransform = transformString;
             layerStyle.mozTransform = transformString;
         });
-
-        // console.log(initialX, initialY);
     });
+})();
+
+(function() {
+
+    var parallaxScroll = (function () {
+
+        var bg = document.querySelector('.parallax-bg'),
+            user = document.querySelector('.parallax-user'),
+            sectionName = document.querySelector('.parallax-name');
+
+        return {
+            move: function (block, windowScroll, strafeAmount) {
+                var strafe = windowScroll / -strafeAmount + '%',
+                    style = block.style;
+
+                style.marginTop = topString;
+            },
+
+            init: function (wScroll) {
+                this.move(bg, wScroll, 45);
+                this.move(sectionName, wScroll, 35);
+                this.move(user, wScroll, 25);
+            }
+        }
+
+    })();
+
+    window.onscroll = function() {
+
+        var wScroll = window.pageYOffset;
+
+        parallaxScroll.init(wScroll);
+    };
 })();
