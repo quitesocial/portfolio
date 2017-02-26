@@ -37,7 +37,7 @@
                 var strafe = windowScroll / -strafeAmount + '%',
                     style = block.style;
 
-                style.marginTop = topString;
+                style.marginTop = strafe;
             },
 
             init: function (wScroll) {
