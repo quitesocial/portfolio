@@ -56,3 +56,21 @@
         parallaxScroll.init(wScroll);
     };
 })();
+
+(function() {
+
+    var button = $('.auth__button'),
+        flipContainer = $('.wrapper'),
+        backButton = $('.auth__back-button');
+
+    button.on('click', function() {
+       flipContainer.addClass('flip');
+       button.addClass('auth__button_hidden');
+    });
+
+    backButton.on('click', function () {
+       flipContainer.removeClass('flip');
+       button.removeClass('auth__button_hidden');
+    });
+
+})();

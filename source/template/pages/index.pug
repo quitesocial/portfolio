@@ -5,7 +5,10 @@ block title
 
 block content
     .wrapper#parallax
-        include ../modules/welcome
-        include ../modules/auth
+        .welcome-bg
+            img.welcome-bg__pic.parallax-layer(src='assets/images/water.jpg')
+        .flipper
+            include ../modules/welcome
+            include ../modules/auth
         button.auth__button(href='#') Авторизоваться
         include ../modules/copyright

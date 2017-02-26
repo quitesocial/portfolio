@@ -1,13 +1,17 @@
 .auth {
-  display: none;
+  display: flex;
   flex-direction: column;
   width: 380px;
   height: 395px;
   background-color: rgba($grey, .5);
   border-radius: 10px;
   overflow: hidden;
-  transform: rotateY(-180deg)[translateX(-100%)];
-  z-index: 10;
+
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
 
   @include desktop {
     height: auto;
@@ -15,7 +19,6 @@
 
   @include tablet {
     height: auto;
-    width: auto;
   }
 
   @include mobile {
@@ -250,6 +253,10 @@
 
     &:focus {
       outline: none;
+    }
+
+    &_hidden {
+      display: none;
     }
   }
 }
