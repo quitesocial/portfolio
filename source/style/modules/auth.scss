@@ -23,7 +23,7 @@
 
   @include mobile {
     height: auto;
-    width: 300px;
+    max-width: 300px;
   }
 
   &__info {
@@ -33,6 +33,11 @@
     width: 100%;
     height: 350px;
     padding: 35px 20px 20px;
+
+    @include mobile {
+      padding: 30px 20px 20px;
+      height: auto;
+    }
   }
 
   &__title {
@@ -47,6 +52,8 @@
 
     @include mobile {
       font-size: 30px;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
     }
 
     &:after {
@@ -75,6 +82,10 @@
     width: 100%;
     height: 45px;
     margin-bottom: 15px;
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
 
     &-icon {
       display: flex;
@@ -107,9 +118,17 @@
           width: 20px;
           height: 45px;
           background-color: #f0efe9;
-          top: 50%;
-          left: 50%;
+          top: 47%;
+          left: 55%;
           transform: translate(10%, -49%);
+
+          @include desktop {
+            top: 49%;
+          }
+
+          @include mobile {
+            top: 49%;
+          }
         }
       }
 
@@ -121,8 +140,8 @@
           width: 20px;
           height: 45px;
           background-color: #f0efe9;
-          top: 50%;
-          left: 50%;
+          top: 55%;
+          left: 55%;
           transform: translate(10%, -51%);
         }
       }
@@ -148,6 +167,10 @@
     color: white;
     font-weight: 300;
     margin-bottom: 15px;
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
   }
 
   &__checkbox {
@@ -196,6 +219,11 @@
     width: 100%;
     height: 45px;
     background-color: rgba(white, .5);
+
+    @include mobile {
+      height: auto;
+      max-width: 300px;
+    }
 
     &-item {
       display: block;

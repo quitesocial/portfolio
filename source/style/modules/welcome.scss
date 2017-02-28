@@ -10,7 +10,7 @@
 }
 
 .wrapper.flip .flipper {
-  transform: rotateY(180deg);
+  transform: rotateY(180.5deg);
 }
 
 .welcome-bg {
@@ -18,9 +18,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  width: 2000px;
-  height: 1125px;
+  transform: translate(-50%, -45%);
+  width: 2500px;
 
   img {
     width: 100%;
@@ -83,6 +82,10 @@
     width: 100%;
     height: 45px;
     background-color: rgba(white, .5);
+
+    @include mobile {
+      height: auto;
+    }
 
     &-item {
       display: block;

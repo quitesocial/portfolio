@@ -6,6 +6,10 @@
   align-items: center;
   color: white;
 
+  @include mobile {
+    margin: 10px 0;
+  }
+
   &__pic {
     width: 140px;
     height: 140px;

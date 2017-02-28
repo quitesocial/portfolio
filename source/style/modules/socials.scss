@@ -3,6 +3,10 @@
   justify-content: center;
   margin: 35px 0;
 
+  @include mobile {
+    margin: 25px 0;
+  }
+
   &__item {
     height: 20px;
     max-width: 25px;
