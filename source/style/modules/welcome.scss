@@ -9,8 +9,16 @@
   perspective: 1000px;
 }
 
+.wrapper.flip .welcome {
+  transform: rotateY(180deg);
+}
+
+.wrapper.flip .auth {
+  transform: rotateY(0deg);
+}
+
 .wrapper.flip .flipper {
-  transform: rotateY(180.5deg);
+
 }
 
 .welcome-bg {
@@ -19,7 +27,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -45%);
-  width: 2500px;
+  width: 3000px;
 
   img {
     width: 100%;
@@ -40,6 +48,8 @@
   backface-visibility: hidden;
   position: absolute;
   top: 0;
+  transition: .6s;
+  transform-style: preserve-3d;
   left: 0;
   transform: rotateY(0deg);
 
