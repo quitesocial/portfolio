@@ -60,7 +60,7 @@
 (function() {
 
     var button = $('.auth__button'),
-        flipContainer = $('.wrapper'),
+        flipContainer = $('.flipper'),
         backButton = $('.auth__back-button');
 
     button.on('click', function() {

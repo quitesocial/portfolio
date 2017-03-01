@@ -7,13 +7,14 @@
   border-radius: 10px;
   overflow: hidden;
 
-  backface-visibility: hidden;
   position: absolute;
   top: 0;
-  transition: .6s;
-  transform-style: preserve-3d;
+  z-index: 0;
+  opacity: 0;
+  transition: .4s;
+  visibility: hidden;
   left: 0;
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 
   @include desktop {
     height: auto;
