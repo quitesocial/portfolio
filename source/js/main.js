@@ -111,11 +111,11 @@ let activePostChanger = (() => {
             var menu_selector = ".blog-nav";
 
             function onScroll() {
-                var scroll_top = $(document).scrollTop() / 1.08;
+                var scroll_top = $(document).scrollTop();
                 $(menu_selector + " a").each(function () {
                     var hash = $(this).attr("href");
                     var target = $(hash);
-                    if (target.position().top <= scroll_top && (target.position().top * 2) + target.outerHeight() > scroll_top) {
+                    if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
                         $(menu_selector + " a.blog-nav__link_active").removeClass("blog-nav__link_active");
                         $(this).addClass("blog-nav__link_active");
                     } else {
@@ -148,7 +148,7 @@ window.onload = () => {
     parallaxMouseMove.init();
     flipper.init();
     menu.init();
-    if ($('.blog-nav__list').length) {
+    if ($('.blog-nav').length) {
         blogMenu.init();
         activePostChanger.init();
     }

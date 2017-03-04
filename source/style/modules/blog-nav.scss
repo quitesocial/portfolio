@@ -10,11 +10,15 @@
   }
 
   @include tablet {
-    display: none;
+    display: block;
+    position: absolute;
+    width: 100%;
   }
 
   @include mobile {
-    display: none;
+    display: block;
+    position: absolute;
+    width: 100%;
   }
 
   &__list {
@@ -28,8 +32,56 @@
     text-align: right;
     vertical-align: middle;
 
+    @include tablet {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100vh;
+      left: 0;
+      padding: 30px 20px 30px 0;
+      background-color: $light-green;
+      z-index: 300;
+    }
+
+    @include mobile {
+      position: absolute;
+      top: 0;
+      width: 80%;
+      height: 100vh;
+      left: 0;
+      padding: 30px 20px 30px 0;
+      background-color: $light-green;
+      z-index: 300;
+    }
+
+    &:after {
+      content: "";
+      display: none;
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      top: 240px;
+      right: -20px;
+      background-color: $light-green;
+
+      @include tablet {
+        display: block;
+        right: -20px;
+      }
+
+      @include mobile {
+        display: block;
+        top: 200px;
+        width: 40px;
+        height: 40px;
+        right: -10px;
+      }
+    }
+
     &_totop {
       position: fixed;
+      z-index: 300;
       top: 0;
       left: 0;
       width: 30%;
@@ -40,11 +92,40 @@
       }
 
       @include tablet {
-        display: none;
+        width: 50%;
+        height: 100vh;
+        left: 0;
       }
 
       @include mobile {
+        width: 80%;
+        height: 100vh;
+        left: 0;
+      }
+
+      &:after {
+        content: "";
         display: none;
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        top: 240px;
+        right: -20px;
+        z-index: 200;
+        background-color: $light-green;
+
+        @include tablet {
+          display: block;
+        }
+
+        @include mobile {
+          width: 40px;
+          height: 40px;
+          top: 200px;
+          right: -10px;
+          display: block;
+        }
       }
     }
   }
@@ -53,9 +134,26 @@
     text-decoration: none;
     color: $green-grey;
 
+    @include tablet {
+      color: rgba(white, .5);
+    }
+
+    @include mobile {
+      font-size: 14px;
+      color: rgba(white, .5);
+    }
+
     &:hover {
       text-decoration: none;
       color: rgba($green-grey, .7);
+
+      @include tablet {
+        color: white;
+      }
+
+      @include mobile {
+        color: white;
+      }
     }
 
     &_active {
@@ -64,6 +162,16 @@
         position: relative;
         color: $green;
         font-weight: 600;
+
+        @include tablet {
+          font-weight: 400;
+          color: white;
+        }
+
+        @include mobile {
+          color: white;
+          font-weight: 400;
+        }
 
         &:after {
           content: "";
@@ -75,6 +183,14 @@
           width: 3px;
           height: 40px;
           background-color: $green;
+
+          @include tablet {
+            display: none;
+          }
+
+          @include mobile {
+            display: none;
+          }
         }
       }
     }
@@ -88,23 +204,10 @@
     margin-bottom: 25px;
     padding: 10px 20px 10px 0;
 
-    &_active {
-      display: block;
-      position: relative;
-      color: $green;
-      font-weight: 600;
-
-      &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        width: 3px;
-        height: 40px;
-        background-color: $green;
-      }
+    @include mobile {
+      min-height: 20px;
+      margin-bottom: 15px;
+      padding: 10px 20px 10px 0;
     }
   }
 }
