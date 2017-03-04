@@ -27,6 +27,57 @@
     padding: 30px;
     text-align: right;
     vertical-align: middle;
+
+    &_totop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 30%;
+
+      @include desktop {
+        width: 25%;
+        padding-left: 120px;
+      }
+
+      @include tablet {
+        display: none;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $green-grey;
+
+    &:hover {
+      text-decoration: none;
+      color: rgba($green-grey, .7);
+    }
+
+    &_active {
+      .blog-nav__item {
+        display: block;
+        position: relative;
+        color: $green;
+        font-weight: 600;
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 3px;
+          height: 40px;
+          background-color: $green;
+        }
+      }
+    }
   }
 
   &__item {
