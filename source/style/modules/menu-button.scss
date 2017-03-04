@@ -5,6 +5,7 @@
   right: 30px;
   width: 35px;
   height: 35px;
+  z-index: 200;
 
   @include mobile {
     top: 15px;

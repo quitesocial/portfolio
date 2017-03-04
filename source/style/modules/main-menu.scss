@@ -1,0 +1,125 @@
+.main-menu {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background-color: rgba($light-green, .8);
+  z-index: 100;
+  width: 100%;
+  height: 0;
+  animation-name: zoomIn;
+  animation-duration: .6s;
+
+  &__nav {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &-list {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 70%;
+
+      @include desktop {
+        height: 50%;
+      }
+
+      @include tablet {
+        height: 50%;
+      }
+
+      @include mobile {
+        height: 50%;
+      }
+    }
+
+    &-item {
+      display: block;
+      position: relative;
+      font-family: $webissimo;
+      font-size: 63px;
+      font-weight: 500;
+
+      @include desktop {
+        padding-bottom: 15px;
+      }
+
+      @include tablet {
+        font-size: 49px;
+        padding-bottom: 15px;
+      }
+
+      @include mobile {
+        font-size: 35px;
+        padding-bottom: 10px;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        height: 3px;
+        width: 90px;
+        transition: .6s;
+      }
+
+      &:hover {
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      &_active {
+        &:after {
+          content: "";
+          display: block;
+          opacity: 1;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: white;
+          height: 3px;
+          width: 90px;
+          transition: .6s;
+        }
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  &_opened {
+    display: flex;
+    height: 100%;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    display: none;
+    height: 0;
+  }
+  to {
+    display: flex;
+    height: 100%;
+  }
+}
