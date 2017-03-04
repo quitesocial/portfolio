@@ -11,7 +11,7 @@
   top: 0;
   z-index: 0;
   opacity: 0;
-  transition: .4s;
+  transition: .4s ease;
   visibility: hidden;
   left: 0;
   transform: rotateY(-180deg);
@@ -23,7 +23,6 @@
   @include tablet {
     height: auto;
   }
-
   @include mobile {
     height: auto;
     width: 300px;

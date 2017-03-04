@@ -1,15 +1,15 @@
-(function () {
-    var parallaxContainer = document.getElementById('parallax'),
+(() => {
+    let parallaxContainer = document.getElementById('parallax'),
         layers = parallaxContainer.getElementsByClassName('parallax-layer');
 
-    window.addEventListener('mousemove', function(e) {
-        var pageX = e.pageX,
+    window.addEventListener('mousemove', (e) => {
+        let pageX = e.pageX,
             pageY = e.pageY,
             initialX = (window.innerWidth / 2) - pageX,
             initialY = (window.innerHeight / 2) - pageY;
 
-        [].slice.call(layers).forEach(function(layer, i) {
-            var divider = (i + 1) / 100,
+        [].slice.call(layers).forEach((layer, i) => {
+            let divider = (i + 1) / 100,
                 positionX = initialX * divider,
                 positionY = initialY * divider,
                 layerStyle = layer.style,
@@ -24,17 +24,17 @@
     });
 })();
 
-(function() {
+(() => {
 
-    var parallaxScroll = (function () {
+    let parallaxScroll = (() => {
 
-        var bg = document.querySelector('.parallax-bg'),
+        let bg = document.querySelector('.parallax-bg'),
             user = document.querySelector('.parallax-user'),
             sectionName = document.querySelector('.parallax-name');
 
         return {
-            move: function (block, windowScroll, strafeAmount) {
-                var strafe = windowScroll / -strafeAmount + '%',
+            move: (block, windowScroll, strafeAmount) => {
+                let strafe = windowScroll / -strafeAmount + '%',
                     style = block.style;
 
                 style.marginTop = strafe;
@@ -49,28 +49,30 @@
 
     })();
 
-    window.onscroll = function() {
+    window.onscroll = () => {
 
-        var wScroll = window.pageYOffset;
+        let wScroll = window.pageYOffset;
 
         parallaxScroll.init(wScroll);
     };
 })();
 
-(function() {
+(() => {
 
-    var button = $('.auth__button'),
+    let button = $('.auth__button'),
         flipContainer = $('.flipper'),
         backButton = $('.auth__back-button');
 
-    button.on('click', function() {
+    button.on('click', () => {
        flipContainer.addClass('flip');
        button.addClass('auth__button_hidden');
     });
 
-    backButton.on('click', function () {
+    backButton.on('click', () => {
        flipContainer.removeClass('flip');
        button.removeClass('auth__button_hidden');
     });
 
 })();
+
+console.log('hello!');

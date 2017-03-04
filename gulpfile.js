@@ -11,6 +11,7 @@ global.$ = {
   },
   gulp: require('gulp'),
   del: require('del'),
+  babel: require('gulp-babel'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()
 };
@@ -18,11 +19,6 @@ global.$ = {
 $.path.task.forEach(function(taskPath) {
   require(taskPath)();
 });
-
-$.gulp.task('sprites', $.gulp.parallel(
-    'sprite-gif',
-    'sprite-png'
-));
 
 $.gulp.task('default', $.gulp.series(
     'clean',
