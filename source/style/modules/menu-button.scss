@@ -1,15 +1,16 @@
 .menu-button {
   display: block;
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 15px;
+  right: 50px;
   width: 35px;
   height: 35px;
   z-index: 200;
+  outline: none;
 
   @include mobile {
-    top: 15px;
-    right: 15px;
+    top: 0;
+    right: 35px;
   }
 
   svg {

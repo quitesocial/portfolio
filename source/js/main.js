@@ -69,6 +69,18 @@ let flipper = (() => {
 
 // hamburger main menu
 
+// let menu = (() => {
+//     return {
+//         init: function init() {
+//             let hamburger = $('.menu-button'),
+//                 mainMenu = $('.main-menu');
+//             hamburger.on('click', () => {
+//                 mainMenu.toggleClass('main-menu_opened');
+//             });
+//         }
+//     }
+// })();
+
 let menu = (() => {
     return {
         init: function init() {
@@ -76,6 +88,7 @@ let menu = (() => {
                 mainMenu = $('.main-menu');
             hamburger.on('click', () => {
                 mainMenu.toggleClass('main-menu_opened');
+                hamburger.toggleClass('is-active');
             });
         }
     }
