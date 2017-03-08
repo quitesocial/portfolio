@@ -107,8 +107,8 @@ let blogMenu = (() => {
 
 let activePostChanger = (() => {
     return {
-        init: function init() {
-            var menu_selector = ".blog-nav";
+        init: function init(navBlockString) {
+            var menu_selector = navBlockString;
 
             function onScroll() {
                 var scroll_top = $(document).scrollTop() / 1.08;
@@ -142,6 +142,21 @@ let activePostChanger = (() => {
     }
 })();
 
+// mobile blog navigation menu
+
+let mobileNav = (() => {
+    let nav = $('.touch-nav .blog-nav__list'),
+        button = $('.touch-button'),
+        openedString = 'blog-nav__list_opened';
+    return {
+        init: function init() {
+            button.on('click', () => {
+                nav.toggleClass(openedString);
+            });
+        }
+    }
+})();
+
 // init block
 
 window.onload = () => {
@@ -150,7 +165,9 @@ window.onload = () => {
     menu.init();
     if ($('.blog-nav__list').length) {
         blogMenu.init();
-        activePostChanger.init();
+        activePostChanger.init('.blog-nav');
+        activePostChanger.init('.touch-nav');
+        mobileNav.init();
     }
 };
 

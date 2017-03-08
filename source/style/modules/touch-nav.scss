@@ -1,0 +1,165 @@
+.touch-nav {
+  display: none;
+  width: 50%;
+
+  @include tablet {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  @include mobile {
+    display: block;
+    position: fixed;
+    width: 80%;
+    top: 0;
+    left: 0;
+  }
+
+  .blog-nav__list {
+    display: none;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    color: $green-grey;
+    padding: 30px;
+    text-align: right;
+    vertical-align: middle;
+    transition: .6s;
+
+    @include tablet {
+      display: flex;
+      margin-left: -100%;
+      background-color: $light-green;
+      height: 100vh;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    @include mobile {
+      display: flex;
+      margin-left: -100%;
+      background-color: $light-green;
+      height: 100vh;
+      justify-content: center;
+      padding: 0 25px 0 15px;
+    }
+
+    &_opened {
+      display: none;
+      transition: .6s;
+
+      @include tablet {
+        display: flex;
+        margin-left: 0;
+      }
+
+      @include mobile {
+        display: flex;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .blog-nav__link {
+    text-decoration: none;
+    color: $green-grey;
+
+    @include tablet {
+      color: rgba(white, .7);
+    }
+
+    @include mobile {
+      color: rgba(white, .7);
+      font-size: 14px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: rgba($green-grey, .7);
+
+      @include tablet {
+        color: white;
+      }
+
+      @include mobile {
+        color: white;
+      }
+    }
+
+    &_active {
+
+      .blog-nav__item {
+        display: block;
+        position: relative;
+        color: $green;
+        font-weight: 600;
+
+        @include tablet {
+          color: white;
+        }
+
+        @include mobile {
+          color: white;
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 3px;
+          height: 40px;
+          background-color: $green;
+
+          @include tablet {
+            display: none;
+          }
+
+          @include mobile {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .blog-nav__item {
+    margin-bottom: 25px;
+
+    @include tablet {
+      margin-bottom: 15px;
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.touch-button {
+  display: none;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background-color: $light-green;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include mobile {
+    display: block;
+    right: -10px;
+  }
+}
