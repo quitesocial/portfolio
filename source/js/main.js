@@ -157,6 +157,92 @@ let mobileNav = (() => {
     }
 })();
 
+// easy portfolio slider
+
+// let easySlider = (() => {
+//     let slider = $('.easy-slider'),
+//         slideWindow = $('.easy-slider__slide').outerWidth(),
+//         slides = $('.easy-slider__container'),
+//         prev = $('.easy-slider__arrow-left'),
+//         next = $('.easy-slider__arrow-right'),
+//         point = $('.easy-slider__item'),
+//         activePointString = 'easy-slider__item_active';
+//     return {
+//         init: function init() {
+//             // [].slice.call(slides).forEach((slide, i) => {
+//             //     slide.style.left = (slideWindow * i + (slideWindow / 2)) + 'px';
+//             // });
+//         }
+//     }
+// })();
+
+let easySlider = (() => {
+    let points = document.querySelectorAll('.easy-slider__item');
+    let slider = document.querySelector('#slider');
+    let pointActive = 0;
+    let prev = document.querySelector('#prev');
+    let next = document.querySelector('#next');
+    return {
+        init: function init() {
+            let setClickedItem = (e) => {
+                removeActivePoints();
+                let clickedPoint = e.target;
+                pointActive = clickedPoint.itemID;
+                changePosition(clickedPoint);
+            };
+            points[pointActive].classList.add("easy-slider__item_active");
+            let removeActivePoints = () => {
+                for (let i = 0; i < points.length; i++) {
+                    points[i].classList.remove("easy-slider__item_active");
+                }
+            };
+            let changePosition = (point) => {
+                point.classList.add("easy-slider__item_active");
+                slider.style.left = point.getAttribute("data-pos");
+            };
+            for (let i = 0; i < points.length; i++) {
+                let point = points[i];
+                point.addEventListener('click', setClickedItem, false);
+                point.itemID = i;
+            }
+            prev.addEventListener('click', (e) => {
+                if (points[0].classList.contains('easy-slider__item_active')) {
+                    e.preventDefault();
+                } else if (points[1].classList.contains('easy-slider__item_active')) {
+                    slider.style.left = '0';
+                    removeActivePoints();
+                    changePosition(points[0]);
+                } else if (points[2].classList.contains('easy-slider__item_active')) {
+                    slider.style.left = '100%';
+                    removeActivePoints();
+                    changePosition(points[1]);
+                } else if (points[3].classList.contains('easy-slider__item_active')) {
+                    slider.style.left = '200%';
+                    removeActivePoints();
+                    changePosition(points[2]);
+                }
+            });
+            next.addEventListener('click', (e) => {
+                if (points[0].classList.contains('easy-slider__item_active')) {
+                    slider.style.left = '-100%';
+                    removeActivePoints();
+                    changePosition(points[1]);
+                } else if (points[1].classList.contains('easy-slider__item_active')) {
+                    slider.style.left = '-200%';
+                    removeActivePoints();
+                    changePosition(points[2]);
+                } else if (points[2].classList.contains('easy-slider__item_active')) {
+                    slider.style.left = '-300%';
+                    removeActivePoints();
+                    changePosition(points[3]);
+                } else if (points[3].classList.contains('easy-slider__item_active')) {
+                    e.preventDefault();
+                }
+            });
+        }
+    }
+})();
+
 // init block
 
 window.onload = () => {
@@ -168,6 +254,9 @@ window.onload = () => {
         activePostChanger.init('.blog-nav');
         activePostChanger.init('.touch-nav');
         mobileNav.init();
+    }
+    if ($('#slider').length) {
+        easySlider.init();
     }
 };
 
