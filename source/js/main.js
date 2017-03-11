@@ -122,7 +122,8 @@ let activePostChanger = (() => {
                         $(this).removeClass("blog-nav__link_active");
                     }
                 });
-            };
+            }
+
             $(document).on("scroll", onScroll);
             $("a[href^='#']").click(function (e) {
                 e.preventDefault();
@@ -158,23 +159,6 @@ let mobileNav = (() => {
 })();
 
 // easy portfolio slider
-
-// let easySlider = (() => {
-//     let slider = $('.easy-slider'),
-//         slideWindow = $('.easy-slider__slide').outerWidth(),
-//         slides = $('.easy-slider__container'),
-//         prev = $('.easy-slider__arrow-left'),
-//         next = $('.easy-slider__arrow-right'),
-//         point = $('.easy-slider__item'),
-//         activePointString = 'easy-slider__item_active';
-//     return {
-//         init: function init() {
-//             // [].slice.call(slides).forEach((slide, i) => {
-//             //     slide.style.left = (slideWindow * i + (slideWindow / 2)) + 'px';
-//             // });
-//         }
-//     }
-// })();
 
 let easySlider = (() => {
     let points = document.querySelectorAll('.easy-slider__item');
@@ -243,9 +227,58 @@ let easySlider = (() => {
     }
 })();
 
+// preloader
+
+let preloader = (() => {
+    let preloader = $('.preloader');
+    let percentsTotal = 0;
+    let imgPath = $('*').map((ndx, element) => {
+        let background = $(element).css('background-image');
+        let isImg = $(element).is('img');
+        let path = '';
+        if (background != 'none') {
+            path = background.replace('url("', '').replace('")', '');
+        }
+        if (isImg) path = $(element).attr('src');
+        if (path) return path;
+    });
+
+    let setPercents = (total, current) => {
+        let percents = Math.ceil(current / total * 100);
+        $('.preloader__percents').text(percents + '%');
+        if (percents >= 100) preloader.fadeOut();
+    };
+    let loadImages = (images) => {
+        if (!images.length) preloader.fadeOut();
+        images.forEach((img, i, images) => {
+            let fakeImage = $('<img>', {
+                attr: {
+                    src: img
+                }
+            });
+            fakeImage.on('load error', () => {
+                percentsTotal++;
+                setPercents(images.length, percentsTotal);
+            });
+        });
+    };
+    return {
+        init: function () {
+            let imgs = imgPath.toArray();
+            loadImages(imgs);
+        }
+    }
+})();
+
 // init block
 
+$(function () {
+    preloader.init();
+});
+
 window.onload = () => {
+    // console.log('loaded');
+    // $('.preloader').fadeOut();
     parallaxMouseMove.init();
     flipper.init();
     menu.init();

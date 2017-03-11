@@ -272,6 +272,12 @@
       height: 100%;
       fill: $light-green;
     }
+
+    &_disabled {
+      svg {
+        opacity: .5;
+      }
+    }
   }
 
   &__arrow-right {
@@ -296,6 +302,12 @@
       width: 100%;
       height: 100%;
       fill: $light-green;
+    }
+
+    &_disabled {
+      svg {
+        opacity: .5;
+      }
     }
   }
 
