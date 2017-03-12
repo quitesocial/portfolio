@@ -11,64 +11,61 @@
   background-size: cover;
 
   &__spinner {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     margin: auto;
-  }
 
-  &__animation {
-    display: block;
-    position: relative;
-    width: 150px;
-    height: 150px;
-    animation: spin 2s linear infinite;
-
-    &, &:before, &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      border: 3px solid transparent;
-      border-top-color: white;
-      border-radius: 50%;
+    @include tablet {
+      width: 100px;
+      height: 100px;
     }
 
-    &:before {
-      top: 13px;
-      bottom: 13px;
-      left: 13px;
-      right: 13px;
-      animation: spin 1.5s linear infinite;
-    }
-
-    &:after {
-      top: 5px;
-      bottom: 5px;
-      left: 5px;
-      right: 5px;
-      animation: spin 3s linear infinite;
+    @include mobile {
+      width: 100px;
+      height: 100px;
     }
   }
 
   &__percents {
     display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     color: white;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__river {
+    display: block;
+    position: relative;
+    width: 75px;
+    height: 75px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      stroke: white;
+      stroke-dasharray: 60;
+      fill: transparent;
+      animation: svg-flow 2s linear infinite;
+    }
   }
 }
 
-@keyframes spin {
+@keyframes svg-flow {
   from {
-    transform: rotate(0deg);
+    stroke-dashoffset: 180;
   }
   to {
-    transform: rotate(360deg);
+    stroke-dashoffset: 60;
   }
 }

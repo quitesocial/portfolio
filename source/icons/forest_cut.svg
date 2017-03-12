@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="47.983002"
+   height="30.493999"
+   viewBox="0 0 47.983002 30.493999"
+   id="svg3349"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="forest_cut.svg">
+  <defs
+     id="defs3351">
+    <linearGradient
+       id="linearGradient5687"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5689" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5677"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5679" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="8.16"
+     inkscape:cx="12.687751"
+     inkscape:cy="24.118624"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:snap-page="false"
+     inkscape:snap-grids="true"
+     units="px"
+     width="47.983px"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3427" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata3354">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1021.8682)">
+    <path
+       id="path5"
+       d="m 1.3234975,1023.2533 c 3.751644,0 3.751644,5.823 7.503851,5.823 3.7527705,0 3.7527705,-5.823 7.5055405,-5.823 3.753896,0 3.753896,5.823 7.507792,5.823 3.753333,0 3.753333,-5.823 7.506103,-5.823 3.755586,0 3.755586,5.823 7.510608,5.823 3.755023,0 3.755023,-5.823 7.510608,-5.823"
+       stroke-miterlimit="10"
+       inkscape:connector-curvature="0"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.05085206;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       id="path5-0"
+       d="m 1.3234975,1033.9467 c 3.7516442,0 3.7516442,5.823 7.5038518,5.823 3.7527697,0 3.7527697,-5.823 7.5055387,-5.823 3.753897,0 3.753897,5.823 7.507794,5.823 3.753332,0 3.753332,-5.823 7.506103,-5.823 3.755584,0 3.755584,5.823 7.510607,5.823 3.755022,0 3.755022,-5.823 7.510609,-5.823"
+       stroke-miterlimit="10"
+       inkscape:connector-curvature="0"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.05085206;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       transform="matrix(0.56305628,0,0,0.74643686,1.3234975,1016.7067)"
+       id="g3-1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.16345668;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+      <path
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.16345668;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0"
+         stroke-miterlimit="10"
+         d="m 0,38.005 c 6.663,0 6.663,7.801 13.327,7.801 6.665,0 6.665,-7.801 13.33,-7.801 6.667,0 6.667,7.801 13.334,7.801 6.666,0 6.666,-7.801 13.331,-7.801 6.67,0 6.67,7.801 13.339,7.801 6.669,0 6.669,-7.801 13.339,-7.801"
+         id="path5-7" />
+    </g>
+  </g>
+</svg>

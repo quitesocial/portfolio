@@ -277,8 +277,6 @@ $(function () {
 });
 
 window.onload = () => {
-    // console.log('loaded');
-    // $('.preloader').fadeOut();
     parallaxMouseMove.init();
     flipper.init();
     menu.init();
