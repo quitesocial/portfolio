@@ -8,14 +8,14 @@ block content
     .parallax-wrapper#parallax
         include ../modules/header_portfolio
         .portfolio__wrapper
-            h1.portfolio__title МОИ РАБОТЫ
+            h1.portfolio__title#portfolio МОИ РАБОТЫ
                 span.portfolio__title-pic
                     svg.portfolio__title-svg
                         use(xlink:href='assets/icons/sprite.svg#works_header' viewBox='0 0 1175.495 313.961')
         .main-container.main-container_portfolio
             include ../modules/easy-slider
             include ../modules/reviews
-            .totop
+            a.totop(href='#portfolio')
                 svg.totop-svg
                     use(xlink:href='assets/icons/sprite.svg#portf_arrow_up' viewBox='0 0 42.736 27.435')
         include ../modules/footer
