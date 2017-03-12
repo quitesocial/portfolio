@@ -9,6 +9,7 @@
   padding: 15px;
   background-color: rgba(white, .8);
   border-radius: 10px;
+  z-index: 500;
 
   @include desktop {
     padding: 35px;
