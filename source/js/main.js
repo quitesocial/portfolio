@@ -629,3 +629,5 @@ window.onscroll = () => {
     let wScroll = window.pageYOffset;
     parallaxScroll.init(wScroll);
 };
+
+console.log('backend-lol');
