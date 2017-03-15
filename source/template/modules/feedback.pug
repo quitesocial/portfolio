@@ -1,10 +1,16 @@
-form.feedback(method='post' action='javascript:void(0);' onsubmit='ajax()')
+form.feedback#feedback
     .feedback__main
         h2.feedback__title СВЯЗАТЬСЯ СО МНОЙ
         .feedback__form
             input.feedback__name(type='text' name='name' placeholder='Имя')
+            span.feedback__error
+                span.feedback__name-error Введите Ваше имя
             input.feedback__email(type='email' name='email' placeholder='Email')
+            span.feedback__error
+                span.feedback__email-error Введите Ваш e-mail
             textarea.feedback__text(name='message' placeholder='Ваше сообщение')
+            span.feedback__error
+                span.feedback__text-error Введите Ваше сообщение
     .feedback__footer
         button.feedback__button(type='submit' name='send') Отправить
         button.feedback__button(type='reset' name='clear') Очистить

@@ -89,6 +89,34 @@
       margin-bottom: 10px;
     }
 
+    &-error {
+      display: block;
+      position: absolute;
+      text-align: left;
+      white-space: nowrap;
+      color: white;
+      font-size: 14px;
+      background-color: $error;
+      padding: 3px 5px;
+      z-index: 300;
+      top: 100%;
+      left: 65%;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -15px;
+        left: 50px;
+        border-right: 8px solid transparent;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid $error;
+        border-left: 8px solid transparent;
+      }
+    }
+
     &-icon {
       display: flex;
       position: absolute;
@@ -145,6 +173,44 @@
           top: 55%;
           left: 55%;
           transform: translate(10%, -51%);
+        }
+      }
+
+      &_error {
+        top: 2px;
+        left: 1px;
+        width: 41px;
+        height: 41px;
+
+        .fa {
+          color: $error;
+
+          &:after {
+            width: 18px;
+            height: 41px;
+            border-top: 2px solid $error;
+            border-bottom: 2px solid $error;
+            border-right: 2px solid $error;
+          }
+        }
+      }
+
+      &_success {
+        top: 2px;
+        left: 1px;
+        width: 41px;
+        height: 41px;
+
+        .fa {
+          color: $green;
+
+          &:after {
+            width: 18px;
+            height: 41px;
+            border-top: 2px solid $green;
+            border-bottom: 2px solid $green;
+            border-right: 2px solid $green;
+          }
         }
       }
     }
@@ -241,7 +307,8 @@
       transition: .5s;
 
       &:last-child {
-        border-right: none;
+        border: none;
+        cursor: pointer;
       }
 
       &:hover {
@@ -289,4 +356,20 @@
       display: none;
     }
   }
+
+  &__error {
+    display: none;
+
+    &_is-error {
+      display: block;
+    }
+  }
+}
+
+.error-login {
+  border: 2px solid $error;
+}
+
+.success-login {
+  border: 2px solid $green;
 }

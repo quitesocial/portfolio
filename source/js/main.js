@@ -290,6 +290,123 @@ let arrowScroll = (() => {
     }
 })();
 
+// feedback form validation
+
+let formValidator = (() => {
+    let init = (form) => {
+        validate(form);
+    };
+    let validate = form => {
+        let error = $('.feedback__error');
+        form.on('submit', e => {
+            e.preventDefault();
+            let elements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]');
+            let valid = true;
+            $.each(elements, (index, value) => {
+                let element = $(value);
+                let val = element.val();
+                if (val.length === 0) {
+                    element.next(error).addClass('feedback__error_is-error');
+                    element.addClass('error');
+                    valid = false;
+                } else {
+                    element.next(error).removeClass('feedback__error_is-error');
+                    element.removeClass('error');
+                    element.addClass('success');
+                }
+            });
+            console.log(valid);
+        });
+        form.on('reset', e => {
+            error.removeClass('feedback__error_is-error');
+            error.prev().removeClass('error');
+            error.prev().removeClass('success');
+        });
+        form.on('change', e => {
+            let elements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]');
+            let valid = true;
+            $.each(elements, (index, value) => {
+                let element = $(value);
+                let val = element.val();
+                if (val.length === 0) {
+                    element.next(error).addClass('feedback__error_is-error');
+                    element.addClass('error');
+                    valid = false;
+                } else {
+                    element.next(error).removeClass('feedback__error_is-error');
+                    element.removeClass('error');
+                    element.addClass('success');
+                }
+            });
+        });
+    };
+    return {
+        init: init,
+    }
+})();
+
+// login form validation
+
+let loginValidator = (() => {
+    let init = (form) => {
+        validate(form);
+    };
+    let validate = form => {
+        let error = $('.auth__error');
+        form.on('submit', e => {
+            e.preventDefault();
+            let elements = form.find('input').not('input[type="file"], input[type="hidden"], input[type="checkbox"], input[type="radio"]');
+            let valid = true;
+            $.each(elements, (index, value) => {
+                let element = $(value);
+                let icon = element.prev('.auth__input-icon');
+                let val = element.val();
+                if (val.length === 0) {
+                    element.next(error).addClass('auth__error_is-error');
+                    icon.removeClass('auth__input-icon_success');
+                    element.removeClass('success-login');
+                    icon.addClass('auth__input-icon_error');
+                    element.addClass('error-login');
+                    valid = false;
+                } else {
+                    element.next(error).removeClass('auth__error_is-error');
+                    icon.removeClass('auth__input-icon_error');
+                    element.removeClass('error-login');
+                    icon.addClass('auth__input-icon_success');
+                    element.addClass('success-login');
+                }
+            });
+            console.log(valid);
+        });
+        form.on('change', e => {
+            let elements = form.find('input').not('input[type="file"], input[type="hidden"], input[type="checkbox"], input[type="radio"]');
+            let valid = true;
+            $.each(elements, (index, value) => {
+                let element = $(value);
+                let icon = element.prev('.auth__input-icon');
+                let val = element.val();
+                if (val.length === 0) {
+                    element.next(error).addClass('auth__error_is-error');
+                    icon.removeClass('auth__input-icon_success');
+                    element.removeClass('success-login');
+                    icon.addClass('auth__input-icon_error');
+                    element.addClass('error-login');
+                    valid = false;
+                } else {
+                    element.next(error).removeClass('auth__error_is-error');
+                    icon.removeClass('auth__input-icon_error');
+                    element.removeClass('error-login');
+                    icon.addClass('auth__input-icon_success');
+                    element.addClass('success-login');
+                }
+            });
+        });
+    };
+    return {
+        init: init,
+    }
+})();
+
 // init block
 
 $(function () {
@@ -309,6 +426,10 @@ window.onload = () => {
     }
     if ($('#slider').length) {
         easySlider.init();
+    }
+    if ($('#feedback, #auth').length) {
+        formValidator.init($('#feedback'));
+        loginValidator.init($('#auth'));
     }
 
 // google maps

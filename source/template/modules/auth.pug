@@ -1,15 +1,19 @@
 .auth
     .auth__info
         h2.auth__title АВТОРИЗУЙТЕСЬ
-        form.auth__form
+        form.auth__form#auth(name='auth')
             .auth__input
                 .auth__input-icon
                     span.fa.fa-user
                 input.auth__input-text(type='text' placeholder='Логин')
+                span.auth__error
+                    span.auth__input-error Введите логин
             .auth__input
                 .auth__input-icon
                     span.fa.fa-key
                 input.auth__input-text(type='password' placeholder='Пароль')
+                span.auth__error
+                    span.auth__input-error Введите пароль
             label.auth__check-label
                 input.auth__checkbox(type='checkbox')
                 | Я человек
@@ -23,4 +27,4 @@
                     | Не уверен
     nav.auth__nav
         a.auth__nav-item.auth__back-button(href='#back') На главную
-        a.auth__nav-item(href='#') Войти
+        button.auth__nav-item(type='submit' name='enter' form='auth') Войти
