@@ -1,0 +1,44 @@
+.admin-header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: $light-green;
+
+  @include mobile {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  &__title {
+    display: block;
+    position: relative;
+    font-size: 28px;
+    color: white;
+    margin: 0;
+
+    @include mobile {
+      order: 1;
+      font-size: 21px;
+      padding-top: 10px;
+      text-align: center;
+    }
+
+    @include tablet {
+      font-size: 21px;
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    color: white;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+}

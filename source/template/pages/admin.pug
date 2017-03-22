@@ -1,0 +1,12 @@
+extends ../template
+
+block title
+    title Панель администратора
+
+block content
+    .admin-wrapper
+        include ../modules/admin-header
+        include ../modules/admin-tabs
+        include ../modules/admin
+        #parallax(style='display: none')
+            .parallax-layer.parallax-bg.parallax-name.parallax-user

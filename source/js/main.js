@@ -407,6 +407,29 @@ let loginValidator = (() => {
     }
 })();
 
+// admin tabs
+
+let adminTabs = (() => {
+    let init = () => {
+        switchTab();
+    };
+    let tab = $('.admin-nav__item');
+    let section = $('.admin');
+    let activeTab = 'admin-nav__item_active';
+    let activeSection = 'admin_active';
+    let switchTab = () => {
+        tab.on('click', e => {
+           e.preventDefault();
+           let tabPosition = $(e.currentTarget).index();
+           section.eq(tabPosition).addClass(activeSection).siblings().removeClass(activeSection);
+           tab.eq(tabPosition).addClass(activeTab).siblings().removeClass(activeTab);
+        });
+    };
+    return {
+        init: init
+    }
+})();
+
 // init block
 
 $(function () {
@@ -418,6 +441,9 @@ window.onload = () => {
     flipper.init();
     arrowScroll.init();
     menu.init();
+    if ($('.admin').length) {
+        adminTabs.init();
+    }
     if ($('.blog-nav__list').length) {
         blogMenu.init();
         activePostChanger.init('.blog-nav');
@@ -629,5 +655,3 @@ window.onscroll = () => {
     let wScroll = window.pageYOffset;
     parallaxScroll.init(wScroll);
 };
-
-console.log('backend-lol');

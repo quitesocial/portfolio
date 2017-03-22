@@ -1,0 +1,85 @@
+section.admin.admin_active
+    h2.admin__title Страница "Обо мне"
+    form.admin__form(name='admin-about')#admin-about
+        .admin__form-section
+            h3.admin__form-heading Frontend
+            ul.admin__form-skills
+                li.admin__form-skill
+                    h4.admin__form-name HTML5
+                    label.admin__form-label
+                        input.admin__form-input(type='text')
+                        span.admin__form-percent %
+                li.admin__form-skill
+                    h4.admin__form-name CSS3
+                    label.admin__form-label
+                        input.admin__form-input(type='text')
+                        span.admin__form-percent %
+                li.admin__form-skill
+                    h4.admin__form-name JavaScript & JQuery
+                    label.admin__form-label
+                        input.admin__form-input(type='text')
+                        span.admin__form-percent %
+        .admin__form-section
+            h3.admin__form-heading Workflow
+            ul.admin__form-skills
+                li.admin__form-skill
+                    h4.admin__form-name Git
+                    label.admin__form-label
+                        input.admin__form-input(type='text')
+                        span.admin__form-percent %
+                li.admin__form-skill
+                    h4.admin__form-name Gulp
+                    label.admin__form-label
+                        input.admin__form-input(type='text')
+                        span.admin__form-percent %
+                li.admin__form-skill
+                    h4.admin__form-name Bower
+                    label.admin__form-label
+                        input.admin__form-input(type='text')
+                        span.admin__form-percent %
+        .admin__form-section
+            h3.admin__form-heading Backend
+            ul.admin__form-skills
+                li.admin__form-skill
+                    h4.admin__form-name PHP
+                    label.admin__form-label
+                        input.admin__form-input(type='text')
+                        span.admin__form-percent %
+                li.admin__form-skill
+                    h4.admin__form-name MySQL
+                    label.admin__form-label
+                        input.admin__form-input(type='text')
+                        span.admin__form-percent %
+                li.admin__form-skill
+                    h4.admin__form-name Node.js & npm
+                    label.admin__form-label
+                        input.admin__form-input(type='text')
+                        span.admin__form-percent %
+                li.admin__form-skill
+                    h4.admin__form-name Mongo.db
+                    label.admin__form-label
+                        input.admin__form-input(type='text')
+                        span.admin__form-percent %
+    button.admin__button(type='submit' form='admin-about') Сохранить
+section.admin
+    h2.admin__title Страница "Мои работы"
+    form.admin__form(name='admin-portfolio')#admin-portfolio
+        .admin__form-section
+            h3.admin__form-heading Добавить работу
+            input.admin__form-text(type='text' placeholder='Название проекта')
+            input.admin__form-text(type='text' placeholder='Технологии')
+            .admin__fake-container
+                .admin__fake-file
+                    img.admin__fake-icon(src='assets/images/add-image.png')
+                    span.admin__fake-text Загрузить картинку
+                input.admin__form-file(type='file')
+    button.admin__button(type='submit' form='admin-portfolio') Добавить
+section.admin
+    h2.admin__title Страница "Блог"
+    form.admin__form(name='admin-blog')#admin-blog
+        .admin__form-section
+            h3.admin__form-heading Добавить запись
+            input.admin__form-text(type='text' placeholder='Название')
+            input.admin__form-text(type='text' placeholder='Дата')
+            textarea.admin__form-textarea(placeholder='Содержание')
+    button.admin__button(type='submit' form='admin-blog') Добавить

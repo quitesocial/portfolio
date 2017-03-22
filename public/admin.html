@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Панель администратора</title>
+    <meta content="Андрей Раздорский" name="author">
+    <meta content="Сайт-портфолио" name="description">
+    <meta content="портфолио сайт андрей раздорский" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="./assets/css/foundation.css">
+    <link rel="stylesheet" href="./assets/css/style.css"><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="admin-wrapper">
+      <header class="admin-header">
+        <h1 class="admin-header__title">Панель администрирования</h1><a class="admin-header__link" href="index.html">Вернуться на сайт</a>
+      </header>
+      <nav class="admin-nav">
+        <ul class="admin-nav__list">
+          <li class="admin-nav__item admin-nav__item_active">Обо мне</li>
+          <li class="admin-nav__item">Мои работы</li>
+          <li class="admin-nav__item">Блог</li>
+        </ul>
+      </nav>
+      <section class="admin admin_active">
+        <h2 class="admin__title">Страница "Обо мне"</h2>
+        <form class="admin__form" name="admin-about" id="admin-about">
+          <div class="admin__form-section">
+            <h3 class="admin__form-heading">Frontend</h3>
+            <ul class="admin__form-skills">
+              <li class="admin__form-skill">
+                <h4 class="admin__form-name">HTML5</h4>
+                <label class="admin__form-label">
+                  <input class="admin__form-input" type="text"><span class="admin__form-percent">%</span>
+                </label>
+              </li>
+              <li class="admin__form-skill">
+                <h4 class="admin__form-name">CSS3</h4>
+                <label class="admin__form-label">
+                  <input class="admin__form-input" type="text"><span class="admin__form-percent">%</span>
+                </label>
+              </li>
+              <li class="admin__form-skill">
+                <h4 class="admin__form-name">JavaScript & JQuery</h4>
+                <label class="admin__form-label">
+                  <input class="admin__form-input" type="text"><span class="admin__form-percent">%</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="admin__form-section">
+            <h3 class="admin__form-heading">Workflow</h3>
+            <ul class="admin__form-skills">
+              <li class="admin__form-skill">
+                <h4 class="admin__form-name">Git</h4>
+                <label class="admin__form-label">
+                  <input class="admin__form-input" type="text"><span class="admin__form-percent">%</span>
+                </label>
+              </li>
+              <li class="admin__form-skill">
+                <h4 class="admin__form-name">Gulp</h4>
+                <label class="admin__form-label">
+                  <input class="admin__form-input" type="text"><span class="admin__form-percent">%</span>
+                </label>
+              </li>
+              <li class="admin__form-skill">
+                <h4 class="admin__form-name">Bower</h4>
+                <label class="admin__form-label">
+                  <input class="admin__form-input" type="text"><span class="admin__form-percent">%</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="admin__form-section">
+            <h3 class="admin__form-heading">Backend</h3>
+            <ul class="admin__form-skills">
+              <li class="admin__form-skill">
+                <h4 class="admin__form-name">PHP</h4>
+                <label class="admin__form-label">
+                  <input class="admin__form-input" type="text"><span class="admin__form-percent">%</span>
+                </label>
+              </li>
+              <li class="admin__form-skill">
+                <h4 class="admin__form-name">MySQL</h4>
+                <label class="admin__form-label">
+                  <input class="admin__form-input" type="text"><span class="admin__form-percent">%</span>
+                </label>
+              </li>
+              <li class="admin__form-skill">
+                <h4 class="admin__form-name">Node.js & npm</h4>
+                <label class="admin__form-label">
+                  <input class="admin__form-input" type="text"><span class="admin__form-percent">%</span>
+                </label>
+              </li>
+              <li class="admin__form-skill">
+                <h4 class="admin__form-name">Mongo.db</h4>
+                <label class="admin__form-label">
+                  <input class="admin__form-input" type="text"><span class="admin__form-percent">%</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </form>
+        <button class="admin__button" type="submit" form="admin-about">Сохранить</button>
+      </section>
+      <section class="admin">
+        <h2 class="admin__title">Страница "Мои работы"</h2>
+        <form class="admin__form" name="admin-portfolio" id="admin-portfolio">
+          <div class="admin__form-section">
+            <h3 class="admin__form-heading">Добавить работу</h3>
+            <input class="admin__form-text" type="text" placeholder="Название проекта">
+            <input class="admin__form-text" type="text" placeholder="Технологии">
+            <div class="admin__fake-container">
+              <div class="admin__fake-file"><img class="admin__fake-icon" src="assets/images/add-image.png"><span class="admin__fake-text">Загрузить картинку</span></div>
+              <input class="admin__form-file" type="file">
+            </div>
+          </div>
+        </form>
+        <button class="admin__button" type="submit" form="admin-portfolio">Добавить</button>
+      </section>
+      <section class="admin">
+        <h2 class="admin__title">Страница "Блог"</h2>
+        <form class="admin__form" name="admin-blog" id="admin-blog">
+          <div class="admin__form-section">
+            <h3 class="admin__form-heading">Добавить запись</h3>
+            <input class="admin__form-text" type="text" placeholder="Название">
+            <input class="admin__form-text" type="text" placeholder="Дата">
+            <textarea class="admin__form-textarea" placeholder="Содержание"></textarea>
+          </div>
+        </form>
+        <button class="admin__button" type="submit" form="admin-blog">Добавить</button>
+      </section>
+      <div id="parallax" style="display: none;">
+        <div class="parallax-layer parallax-bg parallax-name parallax-user"></div>
+      </div>
+    </div>
+    <script src="./assets/js/foundation.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>
+  </body>
+</html>
