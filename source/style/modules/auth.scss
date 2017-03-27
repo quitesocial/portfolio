@@ -229,7 +229,6 @@
   &__check-label {
     display: flex;
     position: relative;
-    width: 100%;
     justify-content: center;
     align-items: center;
     color: white;
@@ -244,7 +243,39 @@
   &__checkbox {
     display: block;
     position: relative;
-    margin-right: 10px;
+    margin-right: 20px;
+
+    &:before {
+      content: "";
+      display: block;
+      color: white;
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      background-color: white;
+      transition: .6s;
+    }
+
+    &:checked {
+      &:before {
+        content: "\f00c";
+        display: block;
+        font-family: FontAwesome;
+        text-align: center;
+        color: white;
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        background-color: $light-green;
+        transition: .6s;
+      }
+    }
   }
 
   &__robot {
@@ -277,7 +308,42 @@
     }
 
     &-button {
-      margin-right: 10px;
+      position: relative;
+      margin-right: 20px;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: white;
+        transition: .6s;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 8px;
+        height: 8px;
+        opacity: 0;
+        border-radius: 50%;
+        background-color: $light-green;
+        transition: .6s;
+      }
+
+      &:checked {
+        &:after {
+          opacity: 1;
+          transition: .6s;
+        }
+      }
     }
   }
 
