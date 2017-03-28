@@ -47,26 +47,6 @@ let parallaxScroll = (() => {
     }
 })();
 
-// welcome page flipper
-
-let flipper = (() => {
-    return {
-        init: function init() {
-            let button = $('.auth__button'),
-                flipContainer = $('.flipper'),
-                backButton = $('.auth__back-button');
-            button.on('click', () => {
-                flipContainer.addClass('flip');
-                button.addClass('auth__button_hidden');
-            });
-            backButton.on('click', () => {
-                flipContainer.removeClass('flip');
-                button.removeClass('auth__button_hidden');
-            });
-        }
-    }
-})();
-
 // hamburger main menu
 
 let menu = (() => {
@@ -415,7 +395,6 @@ $(function () {
 
 window.onload = () => {
     parallaxMouseMove.init();
-    flipper.init();
     arrowScroll.init();
     menu.init();
     if ($('.blog-nav__list').length) {

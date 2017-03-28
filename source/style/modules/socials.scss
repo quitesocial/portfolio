@@ -10,9 +10,10 @@
   &__item {
     height: 20px;
     max-width: 25px;
+    margin-left: 30px;
 
-    &:nth-child(2) {
-      margin: 0 30px;
+    &:first-child {
+      margin: 0;
     }
   }
 
