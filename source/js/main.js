@@ -11,7 +11,7 @@ let parallaxMouseMove = (() => {
                     initialX = (window.innerWidth / 2) - pageX,
                     initialY = (window.innerHeight / 2) - pageY;
                 [].slice.call(layers).forEach((layer, i) => {
-                    let divider = (i + 1) / 100,
+                    let divider = (i + 0.5) / 100,
                         positionX = initialX * divider,
                         positionY = initialY * divider,
                         layerStyle = layer.style,

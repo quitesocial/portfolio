@@ -4,14 +4,18 @@ section.map
         h2.contacts__title КОНТАКТЫ
         ul.contacts__list
             li.contacts__item
-                span.fa.fa-skype(aria-hidden='true')
-                span.contacts__name quitesocial
+                a.contacts__link(href='skype:quitesocial')
+                    span.fa.fa-skype(aria-hidden='true')
+                    span.contacts__name quitesocial
             li.contacts__item
-                span.fa.fa-envelope(aria-hidden='true')
-                span.contacts__name quitesocial@yandex.ru
+                a.contacts__link(href='mailto:quitesocial@yandex.ru')
+                    span.fa.fa-envelope(aria-hidden='true')
+                    span.contacts__name quitesocial@yandex.ru
             li.contacts__item
-                span.fa.fa-phone(aria-hidden='true')
-                span.contacts__name +7 985 057 66 65
+                a.contacts__link(href='tel:+79850576665')
+                    span.fa.fa-phone(aria-hidden='true')
+                    span.contacts__name +7 985 057 66 65
             li.contacts__item
-                span.fa.fa-map-marker(aria-hidden='true')
-                span.contacts__name Москва, пр-т Вернадского 119
+                a.contacts__link(href='https://www.google.ru/maps/place/%D0%BF%D1%80.+%D0%92%D0%B5%D1%80%D0%BD%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE,+119,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119571/@55.6577484,37.4804745,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54d74fa5f20e3:0xdc42f4ba6de4c137!8m2!3d55.6577484!4d37.4826632?hl=ru' target='_blank')
+                    span.fa.fa-map-marker(aria-hidden='true')
+                    span.contacts__name Москва, пр-т Вернадского 119

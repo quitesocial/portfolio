@@ -104,6 +104,18 @@
     @include mobile {
       margin-bottom: 15px;
     }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $grey;
+
+    &:hover {
+      text-decoration: none;
+      color: $grey;
+    }
 
     &:last-child {
       margin-bottom: 0;

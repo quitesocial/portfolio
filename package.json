@@ -28,7 +28,8 @@
     "gulp.spritesmith": "^6.3.0"
   },
   "dependencies": {
-    "normalize.css": "~5.0.0",
-    "jquery": "~3.1.1"
+    "animate.css": "^3.5.2",
+    "jquery": "~3.1.1",
+    "normalize.css": "~5.0.0"
   }
 }
