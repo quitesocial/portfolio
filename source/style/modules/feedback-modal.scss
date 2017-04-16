@@ -1,0 +1,43 @@
+.feedback-modal {
+  padding: 25px 20px;
+  position: relative;
+  display: none;
+
+  &__content {
+
+  }
+
+  &__heading {
+    font-family: $webissimo;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+}
+
+#success, #error {
+
+  .close-button {
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    margin: 30px auto 0;
+    border: 0;
+    background: $light-green;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+
+  }
+}
+
+.popup {
+  text-align: center;
+}

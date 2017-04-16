@@ -34,6 +34,7 @@ $.gulp.task('default', $.gulp.series(
         'copy:image',
         'copy:fonts',
         'copy:sites',
+        'copy:php',
         'css:foundation',
         'sprite:svg'
     ),

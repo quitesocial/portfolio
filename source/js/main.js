@@ -295,7 +295,29 @@ let formValidator = (() => {
                     element.addClass('success');
                 }
             });
-            console.log(valid);
+            if (valid === true) {
+                let formData = form.serialize();
+                $.ajax({
+                    url: '../../mail.php',
+                    type: 'POST',
+                    data: formData,
+                    success: data => {
+                        let popup = data.status ? '#success' : '#error';
+                        $.fancybox.open([
+                            {href : popup}
+                        ], {
+                            type: 'inline',
+                            maxWidth: 350,
+                            fitToView: false,
+                            padding: 10,
+                            closeBtn: false,
+                            afterClose: () => {
+                                form.trigger('reset');
+                            }
+                        });
+                    }
+                })
+            }
         });
         form.on('reset', e => {
             error.removeClass('feedback__error_is-error');
@@ -325,61 +347,13 @@ let formValidator = (() => {
     }
 })();
 
-// login form validation
+//fancybox modal for feedback
 
-let loginValidator = (() => {
-    let init = (form) => {
-        validate(form);
-    };
-    let validate = form => {
-        let error = $('.auth__error');
-        form.on('submit', e => {
-            e.preventDefault();
-            let elements = form.find('input').not('input[type="file"], input[type="hidden"], input[type="checkbox"], input[type="radio"]');
-            let valid = true;
-            $.each(elements, (index, value) => {
-                let element = $(value);
-                let icon = element.prev('.auth__input-icon');
-                let val = element.val();
-                if (val.length === 0) {
-                    element.next(error).addClass('auth__error_is-error');
-                    icon.removeClass('auth__input-icon_success');
-                    element.removeClass('success-login');
-                    icon.addClass('auth__input-icon_error');
-                    element.addClass('error-login');
-                    valid = false;
-                } else {
-                    element.next(error).removeClass('auth__error_is-error');
-                    icon.removeClass('auth__input-icon_error');
-                    element.removeClass('error-login');
-                    icon.addClass('auth__input-icon_success');
-                    element.addClass('success-login');
-                }
-            });
-            console.log(valid);
-        });
-        form.on('change', e => {
-            let elements = form.find('input').not('input[type="file"], input[type="hidden"], input[type="checkbox"], input[type="radio"]');
-            let valid = true;
-            $.each(elements, (index, value) => {
-                let element = $(value);
-                let icon = element.prev('.auth__input-icon');
-                let val = element.val();
-                if (val.length === 0) {
-                    element.next(error).addClass('auth__error_is-error');
-                    icon.removeClass('auth__input-icon_success');
-                    element.removeClass('success-login');
-                    icon.addClass('auth__input-icon_error');
-                    element.addClass('error-login');
-                    valid = false;
-                } else {
-                    element.next(error).removeClass('auth__error_is-error');
-                    icon.removeClass('auth__input-icon_error');
-                    element.removeClass('error-login');
-                    icon.addClass('auth__input-icon_success');
-                    element.addClass('success-login');
-                }
-            });
+let feedbackModal = (() => {
+    let init = () => {
+        $('.close-button').on('click', function (event) {
+            event.preventDefault();
+            $.fancybox.close();
         });
     };
     return {
@@ -406,9 +380,9 @@ window.onload = () => {
     if ($('#slider').length) {
         easySlider.init();
     }
-    if ($('#feedback, #auth').length) {
+    if ($('#feedback').length) {
         formValidator.init($('#feedback'));
-        loginValidator.init($('#auth'));
+        feedbackModal.init();
     }
 
 // google maps

@@ -13,6 +13,7 @@ module.exports = [
   './gulp/tasks/copy.image.js',
   './gulp/tasks/copy.fonts.js',
   './gulp/tasks/copy.sites.js',
+  './gulp/tasks/copy.php.js',
   './gulp/tasks/sprite.svg.js',
   './gulp/tasks/sprite.png.js',
   './gulp/tasks/sprite.gif.js',

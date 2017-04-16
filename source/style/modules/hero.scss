@@ -67,21 +67,11 @@
       display: block;
       position: absolute;
       top: -45px;
-      left: 165px;
+      left: 50%;
+      transform: translateX(-50%);
       width: 350px;
 
-      @include desktop {
-        left: 15px;
-      }
-
-      @include tablet {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
       @include mobile {
-        left: 50%;
-        transform: translateX(-50%);
         width: 200px;
         top: -60px;
       }

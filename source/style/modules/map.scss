@@ -1,7 +1,7 @@
 .map {
   position: relative;
   width: 100%;
-  min-height: 150vh;
+  min-height: 100vh;
 
   @include tablet {
     min-height: 100vh;
@@ -19,6 +19,10 @@
 
   &__loader {
     width: 100%;
-    min-height: 150vh;
+    min-height: 100vh;
+
+    @include mobile {
+      min-height: 1145px;
+    }
   }
 }
